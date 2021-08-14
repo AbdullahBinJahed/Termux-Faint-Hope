@@ -1,0 +1,20 @@
+# For saving assembly of a object file to a text file
+objdump -d main > assembly.txt
+
+# For saving binary of a object file to a text file in octal
+od -d < main > binary.txt
+
+# For saving the disassembly of a object file to a text file
+objdump --disassemble main > assembly.txt
+
+# Saves the assembly of the source file in a *.s file using gcc compiler
+g++ -g -c -Wa,-alh main.cpp
+
+# Saves the assembly of the source file in a *.s file
+clang++ main.cpp -S
+
+# Saves the binary of a binary file to a text file
+xxd -b main > bin.txt
+
+# Saves the hex of a binary file to a text file
+hexdump -C main > hex.txt
