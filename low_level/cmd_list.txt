@@ -18,3 +18,6 @@ xxd -b main > bin.txt
 
 # Saves the hex of a binary file to a text file
 hexdump -C main > hex.txt
+
+# Saves the binary of the executable
+objcopy -I elf32-little -j .text -O binary main.o content.bin
