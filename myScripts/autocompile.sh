@@ -1,18 +1,27 @@
 TIMEFORMAT='Compile Time: %3R seconds'
 #cprogram=`ls ./*.{c,cpp}`
-programname=`ls | egrep '\.c$|\.cpp$'`
+program_name=`ls | egrep '\.c$|\.cpp$'`
 
-
-if [[ $programname == *.c ]]
+if [[ $program_name == *.c ]]
 then
-  program=`basename $programname .c`
-  time clang $programname -o $program
+  program=`basename $program_name .c`
+  compiler=gcc
+  if [[ $1 == c ]]
+  then
+    compiler=clang
+  fi
+  time $compiler $program_name -o $program
   ./$program
 else
-  if [[ $programname == *.cpp ]]
+  if [[ $program_name == *.cpp ]]
   then
-    program=`basename $programname .cpp`
-    time clang++ $programname -o $program
+    program=`basename $program_name .cpp`
+    compiler=g++
+    if [[ $1 == c ]]
+    then
+      compiler=clang++
+    fi
+    time $compiler $program_name -o $program
     ./$program
   else
     echo "No C or Cpp Program found"
