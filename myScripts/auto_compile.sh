@@ -1,5 +1,5 @@
 TIMEFORMAT='Compile Time: %3R seconds'
-executable=""
+
 main()
 {
   if [ "$2" == "" ]; then
@@ -37,14 +37,14 @@ Compile()
     compiler=gcc
     if [[ $1 == c ]]; then compiler=clang; fi
     time $compiler $program_name -o $program
-    executable=$program
+    export executable=$program
   else
     if [[ $program_name == *.cpp ]]; then
       program=`basename $program_name .cpp`
       compiler=g++
       if [[ $1 == c ]]; then compiler=clang++; fi
       time $compiler $program_name -o $program
-      executable=$program
+      export executable=$program
     else
       echo "No C or Cpp Program found"
     fi
