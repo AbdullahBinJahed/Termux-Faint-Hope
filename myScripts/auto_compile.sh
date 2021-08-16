@@ -51,4 +51,4 @@ Compile()
   fi
 }
 
-main "$@";exit
+main "$@";
