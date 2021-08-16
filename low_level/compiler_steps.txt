@@ -1,5 +1,0 @@
-program_name=`ls | egrep \.c$`
-name=`basename $program_name .c`
-
-# First we have to run the preprocessor to the source file
-clang $program_name -E > $name.i
