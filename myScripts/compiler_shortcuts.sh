@@ -11,8 +11,8 @@ BOLD='\033[1m'
 
 main()
 {
-  if ( ls *.c 1>/dev/null 2>&1 ) || ( ls *.cpp 1>/dev/null 2>&1 ); then
     ArgCheck "$@"
+  if ( ls *.c 1>/dev/null 2>&1 ) || ( ls *.cpp 1>/dev/null 2>&1 ); then
     if [ $compile_mode == "all_files" ]; then
       list_of_programs=$(ls *.{c,cpp} 2>/dev/null)
       for program_name in $list_of_programs; do
@@ -26,7 +26,7 @@ main()
       if [ -f $program ]; then ./$program; fi
     fi
   else
-    echo "File doesn't exist"
+    echo "No C or C++ program found"
     return 1
   fi
 }
