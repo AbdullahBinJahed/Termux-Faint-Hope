@@ -6,7 +6,7 @@ action="Compile"
 run="false"
 
 NONE='\033[00m'
-#GREEN='\033[01;32m'
+BGREEN='\033[01;32m'
 GREEN='\033[00;32m'
 RED='\033[01;31m'
 CYAN='\033[01;36m'
@@ -126,10 +126,10 @@ ArgCheck()
           kill -INT $$
           ;;
         --update )
-          echo -e "${GREEN}${BOLD}Updating...${NONE}"
+          echo -e "${BGREEN}Updating...${NONE}"
           wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh
           rm $HOME/.lolicon/compiler_shortcuts.sh && mv compiler_shortcuts.sh $HOME/.lolicon/
-          echo -e "${GREEN}${BOLD}Update complete${NONE}"
+          echo -e "${BGREEN}Update complete${NONE}"
           kill -INT $$
           ;;
         * )
