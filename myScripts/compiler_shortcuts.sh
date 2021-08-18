@@ -165,10 +165,10 @@ Help()
   echo
   echo "Arguments:"
   echo "  -a                         select all .c or .cpp files"
-  echo "  -asm                       Runs the assembler to create object files *.o"
+  echo "  -asm                       runs the assembler to create object files *.o"
   echo "  -bin                       creates the binary instructions and saves them in a file"
   echo "  -c                         use the Clang Compiler"
-  echo "  -cmp                       Runs the Compiler to create assembly code *.s"
+  echo "  -cmp                       runs the Compiler to create assembly code *.s"
   echo "  --help                     prints this message"
   echo "  -l                         links the object file with linker and saves what arguments                               passed to linker into a *.txt file"
   echo "  -p                         only Preprocess programs and saves them in *.i file"
