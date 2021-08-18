@@ -69,9 +69,9 @@ Linker()
   path=$(pwd)/$program.o
   grep -oP '(?<=^ \"/data/data/com.termux/files/usr/bin/ld\" ).*' report.txt > templdargs.txt
   rm report.txt
-  sed 's|[a-zA-Z0-9\/\.]*tmp[.a-zA-Z0-9\/\-]*|'"$path"'|g' templdargs.txt > ${program}_linker_args.txt
+  sed 's|[a-zA-Z0-9\/\.]*tmp[.a-zA-Z0-9\/\-]*|'"$path"'|g' templdargs.txt > linker_args_for_$program.txt
   rm templdargs.txt
-  ld @${program}_linker_args.txt -o $program
+  ld @linker_args_for_$program.txt -o $program
   rm $program.o 2>/dev/null
 }
 
