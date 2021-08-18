@@ -126,10 +126,10 @@ ArgCheck()
           kill -INT $$
           ;;
         --update )
-          echo -e "${BOLD}${GREEN}Updating...${NONE}"
+          echo -e "${GREEN}${BOLD}Updating...${NONE}"
           wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh
           rm $HOME/.lolicon/compiler_shortcuts.sh && mv compiler_shortcuts.sh $HOME/.lolicon/
-          echo -e "${BOLD}${GREEN}Update complete${NONE}"
+          echo -e "${GREEN}${BOLD}Update complete${NONE}"
           kill -INT $$
           ;;
         * )
