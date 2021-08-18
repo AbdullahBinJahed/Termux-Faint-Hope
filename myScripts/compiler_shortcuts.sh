@@ -14,7 +14,7 @@ BOLD='\033[1m'
 
 main()
 {
-    ArgCheck "$@"
+  ArgCheck "$@"
   if ( ls *.c 1>/dev/null 2>&1 ) || ( ls *.cpp 1>/dev/null 2>&1 ); then
     if [ "$compile_mode" == "all_files" ]; then
       list_of_programs=$(ls *.{c,cpp} 2>/dev/null)
@@ -36,26 +36,26 @@ main()
 
 Compile()
 {
-  echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
+  echo "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
   time $compiler $program_name -o $program
 }
 
 Preprocessor()
 {
-  echo -e "${GREEN}Preprocessing ${BOLD}$program_name${GREEN}...${NONE}"
+  echo "${GREEN}Preprocessing ${BOLD}$program_name${GREEN}...${NONE}"
   $compiler $program_name -E > $program.i
 }
 
 Compiler()
 {
-  echo -e "${GREEN}Running compilation process for ${BOLD}$program_name${GREEN}...${NONE}"
+  echo "${GREEN}Running compilation process for ${BOLD}$program_name${GREEN}...${NONE}"
   $compiler $program_name -S
 }
 
 Assembler()
 {
   Compiler
-  echo -e "${GREEN}Creating assembly of ${BOLD}$program_name${GREEN}...${NONE}"
+  echo "${GREEN}Creating assembly of ${BOLD}$program_name${GREEN}...${NONE}"
   as $program.s -o $program.o
   rm $program.s
 }
@@ -63,7 +63,7 @@ Assembler()
 Linker()
 {
   if [ ! -e $program.o ]; then Assembler; fi
-  echo -e "${GREEN}Linking and saving the linker args into ${BOLD}linker_args_for_$program.txt${NONE}"
+  echo "${GREEN}Linking and saving the linker args into ${BOLD}linker_args_for_$program.txt${NONE}"
   $compiler -v $program_name > report.txt 2>&1
   rm a.out 2>/dev/null
   path=$(pwd)/$program.o
@@ -78,14 +78,14 @@ Linker()
 Binary()
 {
   if [ -e $program.o ]; then
-    echo -e "${GREEN}Creating binary of ${BOLD}$program.o${GREEN}...${NONE}"
+    echo "${GREEN}Creating binary of ${BOLD}$program.o${GREEN}...${NONE}"
     objcopy $program.o -O binary $program.bin
     xxd -b $program.bin > ${program}_binary_instruction.txt
     rm $program.bin
   fi
   if [ ! -e $program.o ]; then
     Compile
-    echo -e "${GREEN}Creating binary of ${BOLD}$program_name${GREEN}...${NONE}"
+    echo "${GREEN}Creating binary of ${BOLD}$program_name${GREEN}...${NONE}"
     objcopy $program -O binary $program.bin
     xxd -b $program.bin > ${program}_binary_instruction.txt
     rm $program.bin
@@ -127,15 +127,15 @@ ArgCheck()
           kill -INT $$
           ;;
         --update )
-          echo -e "${BGREEN}Updating...${NONE}"
+          echo "${BGREEN}Updating...${NONE}"
           wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh 1>&2 2>/dev/null
           mv -f compiler_shortcuts.sh $HOME/.lolicon/compiler_shortcuts.sh
           echo
-          echo -e "${BGREEN}Update complete${NONE}"
+          echo "${BGREEN}Update complete${NONE}"
           kill -INT $$
           ;;
         * )
-          echo -e "${RED}Invalid Argument${NONE}"
+          echo "${RED}Invalid Argument${NONE}"
           echo
           Help
           kill -INT $$
@@ -149,11 +149,13 @@ FileCheck()
 {
   if [[ $program_name == *.c ]]; then
     program=`basename $program_name .c`
+    if [ $compiler == g++ ]; then compiler=gcc; fi
     if [ $compiler == clang++ ]; then compiler=clang; fi
   fi
   
   if [[ $program_name == *.cpp ]]; then
     program=`basename $program_name .cpp`
+    if [ $compiler == gcc ]; then compiler=g++; fi
     if [ $compiler == clang ]; then compiler=clang++; fi
   fi
 }
@@ -161,7 +163,7 @@ FileCheck()
 Help()
 {
   echo "Usage: c [ARGS]"
-  echo -e "${CYAN}Shortcuts for some compiler processes${NONE}"
+  echo "${CYAN}Shortcuts for some compiler processes${NONE}"
   echo
   echo "Arguments:"
   echo "  -a                         select all .c or .cpp files"
