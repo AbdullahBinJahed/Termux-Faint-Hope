@@ -2,9 +2,11 @@ TIMEFORMAT='Compile Time: %3R seconds'
 compile_mode="single_file"
 compiler=gcc
 action="Compile"
+run="false"
 
 NONE='\033[00m'
-GREEN='\033[01;32m'
+#GREEN='\033[01;32m'
+GREEN='\033[00;32m'
 RED='\033[01;31m'
 CYAN='\033[01;36m'
 BOLD='\033[1m'
@@ -23,7 +25,7 @@ main()
       program_name=`ls | egrep '\.c$|\.cpp$'`
       FileCheck
       $action
-      if [ -f $program ]; then ./$program; fi
+      if [ "$run" == "true" ]; then ./$program; fi
     fi
   else
     echo "No C or C++ program found"
@@ -33,34 +35,34 @@ main()
 
 Compile()
 {
-  echo -e "${GREEN}Compiling $program_name...${NONE}"
+  echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
   time $compiler $program_name -o $program
 }
 
-Preprocess()
+Preprocessor()
 {
-  echo -e "${GREEN}Preprocessing $program_name...${NONE}"
+  echo -e "${GREEN}Preprocessing ${BOLD}$program_name${GREEN}...${NONE}"
   $compiler $program_name -E > $program.i
 }
 
-Compilation()
+Compiler()
 {
-  echo -e "${GREEN}Running compilation process for $program_name...${NONE}"
+  echo -e "${GREEN}Running compilation process for ${BOLD}$program_name${GREEN}...${NONE}"
   $compiler $program_name -S
 }
 
-Assemble()
+Assembler()
 {
-  Compilation
-  echo -e "${GREEN}Creating assembly of $program_name...${NONE}"
+  Compiler
+  echo -e "${GREEN}Creating assembly of ${BOLD}$program_name${GREEN}...${NONE}"
   as $program.s -o $program.o
   rm $program.s
 }
 
-Link()
+Linker()
 {
-  if [ ! -e $program.o ]; then Assemble; fi
-  echo -e "${GREEN}Linking and saving the linker args into ${program}_linker_args.txt${NONE}"
+  if [ ! -e $program.o ]; then Assembler; fi
+  echo -e "${GREEN}Linking and saving the linker args into ${BOLD}${program}_linker_args.txt${NONE}"
   $compiler -v $program_name > report.txt 2>&1
   rm a.out 2>/dev/null
   path=$(pwd)/$program.o
@@ -74,16 +76,26 @@ Link()
 
 Binary()
 {
-  if [ ! -e $program ]; then Compile; fi
-  echo -e "${GREEN}Creating binary of $program_name...${NONE}"
-  objcopy $program -O binary $program.bin
-  xxd -b $program.bin > ${program}_binary_instruction.txt
-  rm $program.bin
+  if [ -e $program.o ]; then
+    echo -e "${GREEN}Creating binary of ${BOLD}$program.o${GREEN}...${NONE}"
+    objcopy $program.o -O binary $program.bin
+    xxd -b $program.bin > ${program}_binary_instruction.txt
+    rm $program.bin
+  fi
+  if [ ! -e $program.o ]; then
+    Compile
+    echo -e "${GREEN}Creating binary of ${BOLD}$program_name${GREEN}...${NONE}"
+    objcopy $program -O binary $program.bin
+    xxd -b $program.bin > ${program}_binary_instruction.txt
+    rm $program.bin
+  fi
 }
 
 ArgCheck()
 {
-  if [ -z "$1" ]; then action="Compile"
+  if [ -z "$1" ]; then
+    action="Compile"
+    run="true"
   else
     for arg in $@; do
       case $arg in
@@ -97,16 +109,16 @@ ArgCheck()
           compiler=clang
           ;;
         -p )
-          action="Preprocess"
+          action="Preprocessor"
           ;;
         -cmp )
-          action="Compilation"
+          action="Compiler"
           ;;
         -asm )
-          action="Assemble"
+          action="Assembler"
           ;;
         -l )
-          action="Link"
+          action="Linker"
           ;;
         --help )
           Help
@@ -114,7 +126,7 @@ ArgCheck()
           ;;
         * )
           echo
-          echo -e "${BOLD}${RED}Invalid Argument${NONE}"
+          echo -e "${RED}Invalid Argument${NONE}"
           kill -INT $$
           ;;
         esac
@@ -144,10 +156,10 @@ Help()
   echo
   echo "Arguments:"
   echo "  -a                         select all .c or .cpp files"
-  echo "  -asm                       turns programs into assembly and saves them in *.s file"
+  echo "  -asm                       Runs the assembler to create object files *.o"
   echo "  -bin                       creates the binary instructions and saves them in a file"
   echo "  -c                         use the Clang Compiler"
-  echo "  -cmp                       creates object file or machine code of the programs"
+  echo "  -cmp                       Runs the Compiler to create assembly code *.s"
   echo "  --help                     prints this message"
   echo "  -l                         links the object file with linker and saves what arguments                               passed to linker into a *.txt file"
   echo "  -p                         only Preprocess programs and saves them in *.i file"
