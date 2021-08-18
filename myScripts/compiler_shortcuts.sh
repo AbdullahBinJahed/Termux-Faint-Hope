@@ -15,18 +15,18 @@ BOLD='\033[1m'
 main()
 {
   ArgCheck "$@"
-  if ( ls *.c 1>/dev/null 2>&1 ) || ( ls *.cpp 1>/dev/null 2>&1 ); then
+  if ( ls ./*.c 1>/dev/null 2>&1 ) || ( ls ./*.cpp 1>/dev/null 2>&1 ); then
     if [ "$compile_mode" == "all_files" ]; then
-      list_of_programs=$(ls *.{c,cpp} 2>/dev/null)
+      list_of_programs=$(ls -- *.{c,cpp} 2>/dev/null)
       for program_name in $list_of_programs; do
         FileCheck
         $action
       done
     else
-      program_name=$(ls | grep -E '\.c$|\.cpp$')
+      program_name=$(ls -- *.{c,cpp} 2>/dev/null)
       FileCheck
       $action
-      if [ "$run" == "true" ]; then ./$program; fi
+      if [ "$run" == "true" ]; then ./"$program"; fi
     fi
   else
     echo "No C or C++ program found"
@@ -37,58 +37,58 @@ main()
 Compile()
 {
   echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
-  time $compiler $program_name -o $program
+  time $compiler "$program_name" -o "$program"
 }
 
 Preprocessor()
 {
   echo -e "${GREEN}Preprocessing ${BOLD}$program_name${GREEN}...${NONE}"
-  $compiler $program_name -E > $program.i
+  $compiler "$program_name" -E > "$program".i
 }
 
 Compiler()
 {
-  echo -e "${GREEN}Running compilation process for ${BOLD}$program_name${GREEN}...${NONE}"
-  $compiler $program_name -S
+  echo -e "${GREEN}Creating assembly of ${BOLD}$program_name${GREEN}...${NONE}"
+  $compiler "$program_name" -S
 }
 
 Assembler()
 {
   Compiler
-  echo -e "${GREEN}Creating assembly of ${BOLD}$program_name${GREEN}...${NONE}"
-  as $program.s -o $program.o
-  rm $program.s
+  echo -e "${GREEN}Running Assembler to create object code of ${BOLD}$program_name${GREEN}...${NONE}"
+  as "$program".s -o "$program".o
+  rm "$program".s
 }
 
 Linker()
 {
-  if [ ! -e $program.o ]; then Assembler; fi
+  if [ ! -e "$program".o ]; then Assembler; fi
   echo -e "${GREEN}Linking and saving the linker args into ${BOLD}linker_args_for_$program.txt${NONE}"
-  $compiler -v $program_name > report.txt 2>&1
+  $compiler -v "$program_name" > report.txt 2>&1
   rm a.out 2>/dev/null
   path=$(pwd)/$program.o
   grep -oP '(?<=^ \"/data/data/com.termux/files/usr/bin/ld\" ).*' report.txt > templdargs.txt
   rm report.txt
-  sed 's|[a-zA-Z0-9\/\.]*tmp[.a-zA-Z0-9\/\-]*|'"$path"'|g' templdargs.txt > linker_args_for_$program.txt
+  sed 's|[a-zA-Z0-9\/\.]*tmp[.a-zA-Z0-9\/\-]*|'"$path"'|g' templdargs.txt > linker_args_for_"$program".txt
   rm templdargs.txt
-  ld @linker_args_for_$program.txt -o $program
-  rm $program.o 2>/dev/null
+  ld @linker_args_for_"$program".txt -o "$program"
+  rm "$program".o 2>/dev/null
 }
 
 Binary()
 {
-  if [ -e $program.o ]; then
+  if [ -e "$program".o ]; then
     echo -e "${GREEN}Creating binary of ${BOLD}$program.o${GREEN}...${NONE}"
-    objcopy $program.o -O binary $program.bin
-    xxd -b $program.bin > ${program}_binary_instruction.txt
-    rm $program.bin
+    objcopy "$program".o -O binary "$program".bin
+    xxd -b "$program".bin > "$program"_binary_instruction.txt
+    rm "$program".bin
   fi
-  if [ ! -e $program.o ]; then
+  if [ ! -e "$program".o ]; then
     Compile
     echo -e "${GREEN}Creating binary of ${BOLD}$program_name${GREEN}...${NONE}"
-    objcopy $program -O binary $program.bin
-    xxd -b $program.bin > ${program}_binary_instruction.txt
-    rm $program.bin
+    objcopy "$program" -O binary "$program".bin
+    xxd -b "$program".bin > "$program"_binary_instruction.txt
+    rm "$program".bin
   fi
 }
 
@@ -98,7 +98,7 @@ ArgCheck()
     action="Compile"
     run="true"
   else
-    for arg in $@; do
+    for arg in "$@"; do
       case $arg in
         -a )
           compile_mode="all_files"
@@ -149,13 +149,13 @@ ArgCheck()
 FileCheck()
 {
   if [[ $program_name == *.c ]]; then
-    program=`basename $program_name .c`
+    program=$(basename "$program_name" .c)
     if [ $compiler == g++ ]; then compiler=gcc; fi
     if [ $compiler == clang++ ]; then compiler=clang; fi
   fi
   
   if [[ $program_name == *.cpp ]]; then
-    program=`basename $program_name .cpp`
+    program=$(basename "$program_name" .cpp)
     if [ $compiler == gcc ]; then compiler=g++; fi
     if [ $compiler == clang ]; then compiler=clang++; fi
   fi
