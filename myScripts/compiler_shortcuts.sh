@@ -124,9 +124,15 @@ ArgCheck()
           Help
           kill -INT $$
           ;;
+        --update )
+          wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh
+          rm $HOME/.lolicon/compiler_shortcuts.sh && mv compiler_shortcuts.sh $HOME/.lolicon/
+          kill -INT $$
+          ;;
         * )
-          echo
           echo -e "${RED}Invalid Argument${NONE}"
+          echo
+          Help
           kill -INT $$
           ;;
         esac
@@ -163,6 +169,7 @@ Help()
   echo "  --help                     prints this message"
   echo "  -l                         links the object file with linker and saves what arguments                               passed to linker into a *.txt file"
   echo "  -p                         only Preprocess programs and saves them in *.i file"
+  echo "  --update                   updates the script"
 }
 
 main "$@";
