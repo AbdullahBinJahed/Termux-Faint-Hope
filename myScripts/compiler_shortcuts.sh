@@ -74,10 +74,9 @@ Link()
 
 Binary()
 {
-  if [ ! -e $program.o ]; then Assemble; fi
+  if [ ! -e $program ]; then Compile; fi
   echo -e "${GREEN}Creating binary of $program_name...${NONE}"
-  objcopy $program.o -O binary $program.bin
-  rm $program.o
+  objcopy $program -O binary $program.bin
   xxd -b $program.bin > ${program}_binary_instruction.txt
   rm $program.bin
 }
