@@ -23,7 +23,7 @@ main()
       program_name=`ls | egrep '\.c$|\.cpp$'`
       FileCheck
       $action
-      ./$program
+      if [ -f $program ]; then ./$program; fi
     fi
   else
     echo "File doesn't exist"
@@ -33,26 +33,26 @@ main()
 
 Compile()
 {
-  echo -e "${GREEN}Compiling $program_name ...${NONE}"
+  echo -e "${GREEN}Compiling $program_name...${NONE}"
   time $compiler $program_name -o $program
 }
 
 Preprocess()
 {
-  echo -e "${GREEN}Preprocessing $program_name ...${NONE}"
+  echo -e "${GREEN}Preprocessing $program_name...${NONE}"
   $compiler $program_name -E > $program.i
 }
 
 Compilation()
 {
-  echo -e "${GREEN}Running compilation process for $program_name ...${NONE}"
+  echo -e "${GREEN}Running compilation process for $program_name...${NONE}"
   $compiler $program_name -S
 }
 
 Assemble()
 {
   Compilation
-  echo -e "${GREEN}Creating assembly of $program_name${NONE}"
+  echo -e "${GREEN}Creating assembly of $program_name...${NONE}"
   as $program.s -o $program.o
   rm $program.s
 }
@@ -72,6 +72,16 @@ Link()
   rm $program.o 2>/dev/null
 }
 
+Binary()
+{
+  if [ ! -e $program.o ]; then Assemble; fi
+  echo -e "${GREEN}Creating binary of $program_name...${NONE}"
+  objcopy $program.o -O binary $program.bin
+  rm $program.o
+  xxd -b $program.bin > ${program}_binary_instruction.txt
+  rm $program.bin
+}
+
 ArgCheck()
 {
   if [ -z "$1" ]; then action="Compile"
@@ -80,6 +90,9 @@ ArgCheck()
       case $arg in
         -a )
           compile_mode="all_files"
+          ;;
+        -bin )
+          action="Binary"
           ;;
         -c )
           compiler=clang
@@ -101,6 +114,7 @@ ArgCheck()
           kill -INT $$
           ;;
         * )
+          echo
           echo -e "${BOLD}${RED}Invalid Argument${NONE}"
           kill -INT $$
           ;;
@@ -132,6 +146,7 @@ Help()
   echo "Arguments:"
   echo "  -a                         select all .c or .cpp files"
   echo "  -asm                       turns programs into assembly and saves them in *.s file"
+  echo "  -bin                       creates the binary instructions and saves them in a file"
   echo "  -c                         use the Clang Compiler"
   echo "  -cmp                       creates object file or machine code of the programs"
   echo "  --help                     prints this message"
