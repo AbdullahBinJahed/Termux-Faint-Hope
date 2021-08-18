@@ -128,7 +128,7 @@ ArgCheck()
         --update )
           echo -e "${BGREEN}Updating...${NONE}"
           wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh
-          rm $HOME/.lolicon/compiler_shortcuts.sh && mv compiler_shortcuts.sh $HOME/.lolicon/
+          cat compiler_shortcuts.sh > $HOME/.lolicon/compiler_shortcuts.sh
           echo -e "${BGREEN}Update complete${NONE}"
           kill -INT $$
           ;;
