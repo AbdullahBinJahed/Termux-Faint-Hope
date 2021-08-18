@@ -167,15 +167,15 @@ Help()
   echo -e "${CYAN}Shortcuts for some compiler processes${NONE}"
   echo
   echo "Arguments:"
-  echo "  -a                      select all .c or .cpp files"
-  echo "  -asm                    runs the assembler to create object files *.o"
-  echo "  -bin                    creates the binary instructions and saves them in a file"
-  echo "  -c                      use the Clang Compiler"
-  echo "  -cmp                    runs the Compiler to create assembly code *.s"
-  echo "  --help                  prints this message"
-  echo "  -l                      links the object file with linker and saves what arguments passed to linker into a *.txt file\n"
-  echo "  -p                      only Preprocess programs and saves them in *.i file"
-  echo "  --update                updates the script"
+  printf "  -a                      select all .c or .cpp files\n"
+  printf "  -asm                    runs the assembler to create object files *.o\n"
+  printf "  -bin                    creates the binary instructions and saves them in a file\n"
+  printf "  -c                      use the Clang Compiler\n"
+  printf "  -cmp                    runs the Compiler to create assembly code *.s\n"
+  printf "  --help                  prints this message\n"
+  printf "  -l                      links the object file with linker and saves what arguments                          were passed to linker into a *.txt file\n\n"
+  printf "  -p                      only Preprocess programs and saves them in *.i file\n"
+  printf "  --update                updates the script\n"
 }
 
 main "$@";
