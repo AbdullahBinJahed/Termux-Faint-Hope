@@ -3,7 +3,7 @@ NONE='\033[00m'
 BGREEN='\033[01;32m'
 
 echo "${BGREEN}Installation started...${NONE}"
-wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh
+wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh 1>/dev/null
 if [ ! -e "$HOME/.lolicon" ]; then mkdir "$HOME/.lolicon"; fi
 rm "$HOME/.lolicon/compiler_shortcuts.sh"
 mv "compiler_shortcuts.sh" "$HOME/.lolicon/"

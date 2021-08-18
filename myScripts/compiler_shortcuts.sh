@@ -119,6 +119,7 @@ ArgCheck()
           action="Assembler"
           ;;
         -l )
+          compiler=clang
           action="Linker"
           ;;
         --help )
@@ -127,7 +128,7 @@ ArgCheck()
           ;;
         --update )
           echo -e "${BGREEN}Updating...${NONE}"
-          wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh
+          wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh 1>/dev/null
           mv -f compiler_shortcuts.sh $HOME/.lolicon/compiler_shortcuts.sh
           echo -e "${BGREEN}Update complete${NONE}"
           kill -INT $$
@@ -147,13 +148,11 @@ FileCheck()
 {
   if [[ $program_name == *.c ]]; then
     program=`basename $program_name .c`
-    if [ $compiler == g++ ]; then compiler=gcc; fi
     if [ $compiler == clang++ ]; then compiler=clang; fi
   fi
   
   if [[ $program_name == *.cpp ]]; then
     program=`basename $program_name .cpp`
-    if [ $compiler == gcc ]; then compiler=g++; fi
     if [ $compiler == clang ]; then compiler=clang++; fi
   fi
 }
