@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 TIMEFORMAT='Compile Time: %3R seconds'
 compile_mode="single_file"
 compiler=gcc
@@ -36,26 +36,26 @@ main()
 
 Compile()
 {
-  echo "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
+  echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
   time $compiler $program_name -o $program
 }
 
 Preprocessor()
 {
-  echo "${GREEN}Preprocessing ${BOLD}$program_name${GREEN}...${NONE}"
+  echo -e "${GREEN}Preprocessing ${BOLD}$program_name${GREEN}...${NONE}"
   $compiler $program_name -E > $program.i
 }
 
 Compiler()
 {
-  echo "${GREEN}Running compilation process for ${BOLD}$program_name${GREEN}...${NONE}"
+  echo -e "${GREEN}Running compilation process for ${BOLD}$program_name${GREEN}...${NONE}"
   $compiler $program_name -S
 }
 
 Assembler()
 {
   Compiler
-  echo "${GREEN}Creating assembly of ${BOLD}$program_name${GREEN}...${NONE}"
+  echo -e "${GREEN}Creating assembly of ${BOLD}$program_name${GREEN}...${NONE}"
   as $program.s -o $program.o
   rm $program.s
 }
@@ -63,7 +63,7 @@ Assembler()
 Linker()
 {
   if [ ! -e $program.o ]; then Assembler; fi
-  echo "${GREEN}Linking and saving the linker args into ${BOLD}linker_args_for_$program.txt${NONE}"
+  echo -e "${GREEN}Linking and saving the linker args into ${BOLD}linker_args_for_$program.txt${NONE}"
   $compiler -v $program_name > report.txt 2>&1
   rm a.out 2>/dev/null
   path=$(pwd)/$program.o
@@ -78,14 +78,14 @@ Linker()
 Binary()
 {
   if [ -e $program.o ]; then
-    echo "${GREEN}Creating binary of ${BOLD}$program.o${GREEN}...${NONE}"
+    echo -e "${GREEN}Creating binary of ${BOLD}$program.o${GREEN}...${NONE}"
     objcopy $program.o -O binary $program.bin
     xxd -b $program.bin > ${program}_binary_instruction.txt
     rm $program.bin
   fi
   if [ ! -e $program.o ]; then
     Compile
-    echo "${GREEN}Creating binary of ${BOLD}$program_name${GREEN}...${NONE}"
+    echo -e "${GREEN}Creating binary of ${BOLD}$program_name${GREEN}...${NONE}"
     objcopy $program -O binary $program.bin
     xxd -b $program.bin > ${program}_binary_instruction.txt
     rm $program.bin
@@ -127,15 +127,15 @@ ArgCheck()
           kill -INT $$
           ;;
         --update )
-          echo "${BGREEN}Updating...${NONE}"
+          echo -e "${BGREEN}Updating...${NONE}"
           wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh 1>&2 2>/dev/null
           mv -f compiler_shortcuts.sh $HOME/.lolicon/compiler_shortcuts.sh
           echo
-          echo "${BGREEN}Update complete${NONE}"
+          echo -e "${BGREEN}Update complete${NONE}"
           kill -INT $$
           ;;
         * )
-          echo "${RED}Invalid Argument${NONE}"
+          echo -e "${RED}Invalid Argument${NONE}"
           echo
           Help
           kill -INT $$
@@ -163,7 +163,7 @@ FileCheck()
 Help()
 {
   echo "Usage: c [ARGS]"
-  echo "${CYAN}Shortcuts for some compiler processes${NONE}"
+  echo -e "${CYAN}Shortcuts for some compiler processes${NONE}"
   echo
   echo "Arguments:"
   echo "  -a                         select all .c or .cpp files"
