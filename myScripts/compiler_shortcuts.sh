@@ -1,3 +1,4 @@
+#!/bin/sh
 TIMEFORMAT='Compile Time: %3R seconds'
 compile_mode="single_file"
 compiler=gcc
@@ -22,7 +23,7 @@ main()
         $action
       done
     else
-      program_name=`ls | egrep '\.c$|\.cpp$'`
+      program_name=$(ls | grep -E '\.c$|\.cpp$')
       FileCheck
       $action
       if [ "$run" == "true" ]; then ./$program; fi
