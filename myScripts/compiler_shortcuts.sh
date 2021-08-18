@@ -63,7 +63,7 @@ Assembler()
 Linker()
 {
   if [ ! -e $program.o ]; then Assembler; fi
-  echo -e "${GREEN}Linking and saving the linker args into ${BOLD}${program}_linker_args.txt${NONE}"
+  echo -e "${GREEN}Linking and saving the linker args into ${BOLD}linker_args_for_$program.txt${NONE}"
   $compiler -v $program_name > report.txt 2>&1
   rm a.out 2>/dev/null
   path=$(pwd)/$program.o
