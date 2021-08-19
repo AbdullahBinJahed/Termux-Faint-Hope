@@ -168,6 +168,7 @@ ArgCheck()
         --update )
           echo
           echo -e "${BGREEN}Updating...${NONE}"
+          sleep 1.5s
           wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh 1>&2 2>/dev/null
           mv -f compiler_shortcuts.sh $HOME/.lolicon/compiler_shortcuts.sh
           echo
