@@ -16,16 +16,22 @@ main()
 {
   ArgCheck "$@"
   if ( ls ./*.c 1>/dev/null 2>&1 ) || ( ls ./*.cpp 1>/dev/null 2>&1 ); then
-    if [ "$compile_mode" == "all_files" ]; then
+    if [ "$compile_mode" = "all_files" ]; then
       list_of_programs=$(ls -- *.{c,cpp} 2>/dev/null)
       for program_name in $list_of_programs; do
         FileCheck
         $action
       done
     else
-      program_name=$(ls -- *.{c,cpp} 2>/dev/null)
-      FileCheck
-      $action
+      if [ "$compile_mode" = "file_arg" ]; then
+        FileCheck
+        $action
+      fi
+      if [ "$compile_mode" = "single_file" ]; then
+        program_name=$(ls -- *.{c,cpp} 2>/dev/null)
+        FileCheck
+        $action
+      fi
       if [ "$run" == "true" ]; then ./"$program"; fi
     fi
   else
@@ -135,6 +141,14 @@ ArgCheck()
           echo -e "${BGREEN}Update complete${NONE}"
           kill -INT $$
           ;;
+        *.c )
+          compile_mode="file_arg"
+          program_name="$arg"
+          ;;
+        *.cpp )
+          compile_mode="file_arg"
+          program_name="$arg"
+          ;;
         * )
           echo -e "${RED}Invalid Argument${NONE}"
           echo
@@ -163,7 +177,7 @@ FileCheck()
 
 Help()
 {
-  echo "Usage: c [ARGS]"
+  echo "Usage: c [ARGS] [FILENAME]"
   echo -e "${CYAN}Shortcuts for some compiler processes${NONE}"
   echo
   echo "Arguments:"
@@ -176,6 +190,9 @@ Help()
   printf '%-4s%-22s%s\n%-26s%s\n' "  -l" "" "links the object file with linker and saves what" "" "arguments were passed to linker into a *.txt file"
   printf "  -p                      only Preprocess programs and saves them in *.i file\n"
   printf "  --update                updates the script\n"
+  echo
+  echo
+  echo "No arguments will compile and run single .c or .cpp program in current directory"
 }
   
 main "$@";
