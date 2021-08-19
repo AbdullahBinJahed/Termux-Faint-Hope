@@ -173,9 +173,9 @@ Help()
   printf "  -c                      use the Clang Compiler\n"
   printf "  -cmp                    runs the Compiler to create assembly code *.s\n"
   printf "  --help                  prints this message\n"
-  printf "  -l                      links the object file with linker and saves what arguments                          were passed to linker into a *.txt file\n\n"
+  printf '%-4s%-22s%s\n%-26s%s\n' "  -l" "" "links the object file with linker and saves what" "" "arguments were passed to linker into a *.txt file"
   printf "  -p                      only Preprocess programs and saves them in *.i file\n"
   printf "  --update                updates the script\n"
 }
-
+  
 main "$@";
