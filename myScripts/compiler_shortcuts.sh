@@ -39,7 +39,10 @@ main()
           kill -INT $$
         fi
       fi
-      if [ "$run" == "true" ]; then ./"$program"; fi
+      if [ "$run" == "true" ]; then
+        echo -e "${BGREEN}Starting program...${NONE}"
+        ./"$program";
+      fi
     fi
   else
     echo "No C or C++ program found"
@@ -151,10 +154,12 @@ ArgCheck()
         *.c )
           compile_mode="file_arg"
           program_name="$arg"
+          run="true"
           ;;
         *.cpp )
           compile_mode="file_arg"
           program_name="$arg"
+          run="true"
           ;;
         * )
           echo -e "${RED}Invalid Argument${NONE}"
