@@ -17,9 +17,8 @@ main()
   ArgCheck "$@"
   if ( ls ./*.c 1>/dev/null 2>&1 ) || ( ls ./*.cpp 1>/dev/null 2>&1 ); then
     if [ "$compile_mode" = "all_files" ]; then
-#      list_of_programs=$(ls ./*.{c,cpp} 2>/dev/null)
-      list_of_programs=$(find . -iregex './.*\.\(c\|cpp\)' -printf '%f\n')
-      for program_name in "$list_of_programs"; do
+      list_of_programs=$(ls -- *.{c,cpp} 2>/dev/null)
+      for program_name in $list_of_programs; do
         FileCheck
         $action
       done
