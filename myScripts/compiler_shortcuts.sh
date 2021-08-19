@@ -28,9 +28,16 @@ main()
         $action
       fi
       if [ "$compile_mode" = "single_file" ]; then
-        program_name=$(ls -- *.{c,cpp} 2>/dev/null)
-        FileCheck
-        $action
+        file_count=$(ls -1 -- *.{c,cpp} 2>/dev/null | wc -l)
+        if [ "$file_count" = 1 ]; then
+          program_name=$(ls -- *.{c,cpp} 2>/dev/null)
+          FileCheck
+          $action
+        else
+          echo
+          echo -e "${RED}Too many files!!! use the -a switch${NONE}"
+          kill -INT $$
+        fi
       fi
       if [ "$run" == "true" ]; then ./"$program"; fi
     fi
