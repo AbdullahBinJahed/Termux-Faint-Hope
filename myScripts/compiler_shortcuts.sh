@@ -93,14 +93,14 @@ Binary()
   if [ -e "$program".o ]; then
     echo -e "${GREEN}Creating binary of ${BOLD}$program.o${GREEN}...${NONE}"
     objcopy "$program".o -O binary "$program".bin
-    xxd -b "$program".bin > "$program"_binary_instruction.txt
+    xxd -b "$program".bin > binary_instruction_of_"$program".txt
     rm "$program".bin
   fi
   if [ ! -e "$program".o ]; then
     Compile
     echo -e "${GREEN}Creating binary of ${BOLD}$program_name${GREEN}...${NONE}"
     objcopy "$program" -O binary "$program".bin
-    xxd -b "$program".bin > "$program"_binary_instruction.txt
+    xxd -b "$program".bin > binary_instruction_of_"$program".txt
     rm "$program".bin
   fi
 }
