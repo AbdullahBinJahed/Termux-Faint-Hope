@@ -11,7 +11,7 @@ if [ ! -e $HOME/.lolicon/compiler_shortcuts.sh ]; then
   als="alias c='source /data/data/com.termux/files/home/.lolicon/compiler_shortcuts.sh'"
   echo "$als" >> "$HOME/.bashrc"
 fi
-rm "$HOME/.lolicon/compiler_shortcuts.sh"
+rm "$HOME/.lolicon/compiler_shortcuts.sh" 2>/dev/null
 mv "compiler_shortcuts.sh" "$HOME/.lolicon/"
 echo "${BGREEN}Setup complete. Now run 'c --help' to see info${NONE}"
 rm compiler_shortcuts_setup.sh
