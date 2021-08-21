@@ -4,7 +4,7 @@ BGREEN='\033[01;32m'
 
 echo "${BGREEN}Setup started...${NONE}"
 echo "${BGREEN}Adding the its-pointless repo to install gcc...${NONE}"
-wget https://its-pointless.github.io/setup-pointless-repo.sh 1>&2 2>/dev/null
+wget https://its-pointless.github.io/setup-pointless-repo.sh
 chmod +x setup-pointless-repo.sh
 ./setup-pointless-repo.sh
 rm setup-pointless-repo.sh
