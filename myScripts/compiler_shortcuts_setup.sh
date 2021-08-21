@@ -8,7 +8,7 @@ sleep 1s
 echo "${BGREEN}Script download complete${NONE}"
 if [ ! -e "$HOME/.lolicon" ]; then mkdir "$HOME/.lolicon"; fi
 if [ ! -e $HOME/.lolicon/compiler_shortcuts.sh ]; then
-  als="alias c='source /data/data/com.termux/files/home/.lolicon/compiler_shortcuts.sh'"
+  als="alias c='bash /data/data/com.termux/files/home/.lolicon/compiler_shortcuts.sh'"
   echo "$als" >> "$HOME/.bashrc"
 fi
 rm "$HOME/.lolicon/compiler_shortcuts.sh" 2>/dev/null
