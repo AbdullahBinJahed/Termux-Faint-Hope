@@ -7,10 +7,10 @@ echo "${BGREEN}Adding the its-pointless repo to install gcc...${NONE}"
 wget https://its-pointless.github.io/setup-pointless-repo.sh 1>&2 2>/dev/null
 chmod +x setup-pointless-repo.sh
 ./setup-pointless-repo.sh
-echo "${BGREEN}Installing gcc-11..."
+echo "${BGREEN}Installing gcc-11...${NONE}"
 pkg install gcc-11
 echo "${BGREEN}Downloading cmp-shct"
-wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/cmp-shct-setup.sh 1>&2 2>/dev/null
+wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/cmp-shct.sh 1>&2 2>/dev/null
 sleep 1s
 echo "${BGREEN}Script download complete${NONE}"
 if [ ! -e "$HOME/.lolicon" ]; then mkdir "$HOME/.lolicon"; fi
