@@ -10,8 +10,10 @@ chmod +x setup-pointless-repo.sh
 rm setup-pointless-repo.sh
 echo "${BGREEN}Installing gcc-11...${NONE}"
 pkg install gcc-11
+setupgcc-11
+setup-patchforgcc
 echo "${BGREEN}Downloading cmp-shct${NONE}"
-wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/cmp-shct.sh 1>&2 2>/dev/null
+wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/cmp-shct.sh
 sleep 1s
 echo "${BGREEN}Script download complete${NONE}"
 if [ ! -e "$HOME/.lolicon" ]; then mkdir "$HOME/.lolicon"; fi
