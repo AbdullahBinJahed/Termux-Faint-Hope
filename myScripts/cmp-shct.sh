@@ -169,8 +169,8 @@ ArgCheck()
           echo
           echo -e "${BGREEN}Updating...${NONE}"
           sleep 1.5s
-          wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh 1>&2 2>/dev/null
-          mv -f compiler_shortcuts.sh $HOME/.lolicon/compiler_shortcuts.sh
+          wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/cmp-shct.sh 1>&2 2>/dev/null
+          mv -f cmp-shct.sh $HOME/.lolicon/cmp-shct.sh
           echo
           echo -e "${BGREEN}Update complete${NONE}"
           kill -INT $$
