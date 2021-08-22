@@ -25,3 +25,4 @@ rm "$HOME/.lolicon/cmp-shct.sh" 2>/dev/null
 mv cmp-shct.sh "$HOME/.lolicon/"
 echo "${BGREEN}Setup complete. Now run 'c --help' to see info${NONE}"
 rm setup-cmp-shct.sh
+source .bashrc
