@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/data/data/com.termux/files/home'
+let g:netrw_dirhist_0='/data/data/com.termux/files/usr/share/vim/vim82/ftplugin'
+let g:netrw_dirhist_9='/data/data/com.termux/files'
+let g:netrw_dirhist_8='/data/data/com.termux/files/usr/share/vim/vim82/ftplugin'
+let g:netrw_dirhist_7='/data/data/com.termux/files'
+let g:netrw_dirhist_6='/data/data/com.termux/files/home'
+let g:netrw_dirhist_5='/data/data/com.termux/files/home/.vim/syntax'
+let g:netrw_dirhist_4='/data/data/com.termux/files/home/.vim'
+let g:netrw_dirhist_3='/data/data/com.termux/files/home/.vim/syntax'
+let g:netrw_dirhist_2='/data/data/com.termux/files/home/.vim'

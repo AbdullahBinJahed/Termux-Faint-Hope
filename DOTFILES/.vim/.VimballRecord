@@ -1,0 +1,1 @@
+getscript.vba: call delete('/data/data/com.termux/files/home/.vim/plugin/getscriptPlugin.vim')|call delete('/data/data/com.termux/files/home/.vim/autoload/getscript.vim')|call delete('/data/data/com.termux/files/home/.vim/GetLatest/GetLatestVimScripts.dist')|call delete('/data/data/com.termux/files/home/.vim/doc/pi_getscript.txt')

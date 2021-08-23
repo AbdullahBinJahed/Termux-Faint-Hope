@@ -20,6 +20,7 @@ endif
 
 
 :nnoremap <Space> i
+:nnoremap <CR> i
 
 "#### Saving and Exiting files
 :inoremap 00 <ESC>:wq<CR>
@@ -48,11 +49,17 @@ inoremap <C-Y> <C-O><C-R>
 :inoremap <S-LEFT> <ESC><C-v>
 :inoremap <S-RIGHT> <ESC><C-v>
 
-"#### Moving Lines Up down
+"#### Moving Lines Up Down
 :noremap [1;3A <ESC>:m-2<CR>
 :noremap! [1;3A <ESC>:m-2<CR>
 :noremap [1;3B <ESC>:m+<CR>
 :noremap! [1;3B <ESC>:m+<CR>
+
+"### Copying line Up Down
+inoremap [1;4B <ESC><S-V>ypi
+inoremap [1;4A <ESC><S-V>y<UP>pi
+
+:noremap! <F1> <ESC>:Texplore<CR>
 
 " #### File and Tabs #### "
 :noremap <F1> <ESC>:Texplore<CR>

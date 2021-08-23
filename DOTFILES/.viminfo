@@ -10,20 +10,197 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/this
+
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:help autosave
+|2,0,1629701504,,"help autosave"
+:-O
+|2,0,1629701409,,"-O"
+:vert ba
+|2,0,1629701345,,"vert ba"
+:vsplit abj.c
+|2,0,1629701079,,"vsplit abj.c"
+:file
+|2,0,1629701063,,"file"
+:vsplit
+|2,0,1629700977,,"vsplit"
+:split
+|2,0,1629700938,,"split"
+:help 'updatetime'
+|2,0,1629700747,,"help 'updatetime'"
+:verbose imap <C-v>
+|2,0,1629681178,,"verbose imap <C-v>"
+:verbose imap <C-x>
+|2,0,1629680345,,"verbose imap <C-x>"
+:verbose imap <tab>
+|2,0,1629680158,,"verbose imap <tab>"
+:verbose <C-z>
+|2,0,1629679713,,"verbose <C-z>"
+:m-2
+|2,0,1629677960,,"m-2"
+:m+
+|2,0,1629677954,,"m+"
+:move +1
+|2,0,1629677889,,"move +1"
+:move -1
+|2,0,1629677881,,"move -1"
+:move
+|2,0,1629677792,,"move"
+:help key-notation
+|2,0,1629677474,,"help key-notation"
+:Te
+|2,0,1629676901,,"Te"
+:Explore
+|2,0,1629676614,,"Explore"
+:tabe 
+|2,0,1629676519,,"tabe "
+:help key-mapping
+|2,0,1629675850,,"help key-mapping"
+:tabe \t
+|2,0,1629671599,,"tabe \\t"
+:verbose
+|2,0,1629669457,,"verbose"
+:inoremap jj <Esc>
+|2,0,1629669221,,"inoremap jj <Esc>"
+:tabe test.cpp
+|2,0,1629666134,,"tabe test.cpp"
+:open 
+|2,0,1629665189,,"open "
+:find 
+|2,0,1629665183,,"find "
+:verbose nmap <Tab>
+|2,0,1629664809,,"verbose nmap <Tab>"
+:find
+|2,0,1629664511,,"find"
 :q
-|2,0,1629500658,,"q"
-:wq
-|2,0,1629484385,,"wq"
+|2,0,1629663863,,"q"
+:n .vim/syntax/cpp.vim
+|2,0,1629663475,,"n .vim/syntax/cpp.vim"
+:prev
+|2,0,1629663449,,"prev"
+:p
+|2,0,1629663435,,"p"
+:n .vim/
+|2,0,1629663418,,"n .vim/"
+:redo
+|2,0,1629661796,,"redo"
+:red
+|2,0,1629659312,,"red"
 :PlugInstall
-|2,0,1629454511,,"PlugInstall"
+|2,0,1629659151,,"PlugInstall"
+:wq!
+|2,0,1629622513,,"wq!"
+:wq
+|2,0,1629622504,,"wq"
+:q!
+|2,0,1629622386,,"q!"
+:echo $TERM
+|2,0,1629621614,,"echo $TERM"
+:help cursor-blinking
+|2,0,1629620838,,"help cursor-blinking"
+:help filetype
+|2,0,1629612551,,"help filetype"
+:help ftplugin
+|2,0,1629611963,,"help ftplugin"
+:colorscheme elflord
+|2,0,1629605948,,"colorscheme elflord"
+:colorscheme desert
+|2,0,1629605939,,"colorscheme desert"
+:colorscheme delek
+|2,0,1629605921,,"colorscheme delek"
+:colorscheme darkblue
+|2,0,1629605904,,"colorscheme darkblue"
+:colorscheme blue
+|2,0,1629605884,,"colorscheme blue"
+:verbose imap 00
+|2,0,1629604723,,"verbose imap 00"
+:verbose imap <CR>
+|2,0,1629604704,,"verbose imap <CR>"
+:verbose imap <cr>
+|2,0,1629604684,,"verbose imap <cr>"
+:help map
+|2,0,1629604195,,"help map"
+:help keymapping
+|2,0,1629604189,,"help keymapping"
+:CocEnable
+|2,0,1629603804,,"CocEnable"
+:CocList extensions
+|2,0,1629590273,,"CocList extensions"
+:PlugStatus
+|2,0,1629590224,,"PlugStatus"
+:CocInstall coc-emmet
+|2,0,1629589899,,"CocInstall coc-emmet"
+:CocInstall coc-dot-complete
+|2,0,1629589875,,"CocInstall coc-dot-complete"
+:CocInstall coc-clang-format-style-options
+|2,0,1629589826,,"CocInstall coc-clang-format-style-options"
+:CocInstall coc-clangd
+|2,0,1629589797,,"CocInstall coc-clangd"
+:C
+|2,0,1629589755,,"C"
+:CocInfo
+|2,0,1629589250,,"CocInfo"
+:checkhealth
+|2,0,1629589146,,"checkhealth"
+::PlugInstall
+|2,0,1629588959,,":PlugInstall"
+:w
+|2,0,1629564409,,"w"
+:Emmet lorem100
+|2,0,1629517935,,"Emmet lorem100"
+:Emmet lorem15
+|2,0,1629517908,,"Emmet lorem15"
+:Emmet lorem:15
+|2,0,1629517878,,"Emmet lorem:15"
+:Emmet html:5
+|2,0,1629517846,,"Emmet html:5"
+:Emmet
+|2,0,1629517829,,"Emmet"
+:GV
+|2,0,1629517675,,"GV"
+:help glvs-dist-install
+|2,0,1629516529,,"help glvs-dist-install"
+:GetLatestVimScripts
+|2,0,1629516501,,"GetLatestVimScripts"
+:glvs-contents
+|2,0,1629517402,,"glvs-contents"
+:glvs contents
+|2,0,1629517388,,"glvs contents"
+:GLVS
+|2,0,1629516993,,"GLVS"
+:so %
+|2,0,1629516848,,"so %"
+:a
+|2,0,1629516776,,"a"
+:getscript-start
+|2,0,1629516273,,"getscript-start"
+:glvs-install
+|2,0,1629516242,,"glvs-install"
+:GetScripts
+|2,0,1629516152,,"GetScripts"
+:help mapping
+|2,0,1629516031,,"help mapping"
+:help map.txt
+|2,0,1629515850,,"help map.txt"
 
 # Search String History (newest to oldest):
+? @$
+|2,1,1629701359,,"@$"
+?/this
+|2,1,1629669647,47,"this"
+?/v
+|2,1,1629669635,47,"v"
 ? \$\(cursor\|select\)\$
-|2,1,1629454964,,"\\$\\(cursor\\|select\\)\\$"
+|2,1,1629517935,,"\\$\\(cursor\\|select\\)\\$"
+? ^-------
+|2,1,1629517598,,"^-------"
+? ^\s*$
+|2,1,1629516848,,"^\\s*$"
 
 # Expression History (newest to oldest):
 
@@ -34,237 +211,1016 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-""-	CHAR	0
-	5
-|3,1,36,0,1,0,1629454746,"5"
+""0	LINE	0
+	  for (int i; i < 6; ++i)
+|3,1,0,1,1,0,1629701360,"  for (int i; i < 6; ++i)"
+"1	LINE	0
+	//// this is a comment
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	////a//
+	////a//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+|3,0,1,1,20,0,1629682420,"//// this is a comment","//","//","//","//","//","//","//","//","//","////a//","////a//","//","//","//","//","//","//","//","//"
+"2	LINE	0
+	"#### Undo and Redo ####"
+|3,0,2,1,1,0,1629682076,"\"#### Undo and Redo ####\""
+"3	LINE	0
+	:inoremap <C-z> <ESC><Space>u
+	:noremap! <C-z> uabj
+	:noremap <C-S-z> <ESC><C-r>
+	:noremap! <C-S-z> <ESC><C-r>
+|3,0,3,1,4,0,1629681595,":inoremap <C-z> <ESC><Space>u",":noremap! <C-z> uabj",":noremap <C-S-z> <ESC><C-r>",":noremap! <C-S-z> <ESC><C-r>"
+"4	LINE	0
+	"#### coc.nvim ####"
+	set encoding=utf-8
+	set hidden
+	set nobackup
+	set nowritebackup
+	set cmdheight=2
+	set updatetime=300
+	set shortmess+=c
+	if has("nvim-0.5.0") || has("patch-8.1.1564")
+	  set signcolumn=number
+	else
+	  set signcolumn=yes
+	endif
+	" Use tab for trigger completion with characters ahead and navigate.
+	inoremap <silent><expr> <TAB>
+	      \ pumvisible() ? "\<C-n>" :
+	      \ <SID>check_back_space() ? "\<TAB>" :
+	      \ coc#refresh()
+	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+	
+	function! s:check_back_space() abort
+	  let col = col('.') - 1
+	  return !col || getline('.')[col - 1]  =~# '\s'
+	endfunction
+	
+	" Use <c-space> to trigger completion.
+	if has('nvim')
+	  inoremap <silent><expr> <c-space> coc#refresh()
+	else
+	  inoremap <silent><expr> <c-@> coc#refresh()
+	endif
+	inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+	                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+	
+	" Use `[g` and `]g` to navigate diagnostics
+	" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+	nmap <silent> [g <Plug>(coc-diagnostic-prev)
+	nmap <silent> ]g <Plug>(coc-diagnostic-next)
+	
+	" GoTo code navigation.
+	nmap <silent> gd <Plug>(coc-definition)
+	nmap <silent> gy <Plug>(coc-type-definition)
+	nmap <silent> gi <Plug>(coc-implementation)
+	nmap <silent> gr <Plug>(coc-references)
+	
+	" Use K to show documentation in preview window.
+	nnoremap <silent> K :call <SID>show_documentation()<CR>
+	
+	function! s:show_documentation()
+	  if (index(['vim','help'], &filetype) >= 0)
+|3,0,4,1,50,0,1629681331,"\"#### coc.nvim ####\"","set encoding=utf-8","set hidden","set nobackup","set nowritebackup","set cmdheight=2","set updatetime=300","set shortmess+=c","if has(\"nvim-0.5.0\") || has(\"patch-8.1.1564\")","  set signcolumn=number","else","  set signcolumn=yes","endif","\" Use tab for trigger completion with characters ahead and navigate.","inoremap <silent><expr> <TAB>","      \\ pumvisible() ? \"\\<C-n>\" :",>50
+|<"      \\ <SID>check_back_space() ? \"\\<TAB>\" :","      \\ coc#refresh()","inoremap <expr><S-TAB> pumvisible() ? \"\\<C-p>\" : \"\\<C-h>\"","","function! s:check_back_space() abort","  let col = col('.') - 1","  return !col || getline('.')[col - 1]  =~# '\\s'","endfunction","","\" Use <c-space> to trigger completion.","if has('nvim')","  inoremap <silent><expr> <c-space> coc#refresh()","else","  inoremap <silent><expr> <c-@> coc#refresh()","endif",>67
+|<"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()","                              \\: \"\\<C-g>u\\<CR>\\<c-r>=coc#on_enter()\\<CR>\"","","\" Use `[g` and `]g` to navigate diagnostics","\" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.","nmap <silent> [g <Plug>(coc-diagnostic-prev)","nmap <silent> ]g <Plug>(coc-diagnostic-next)","","\" GoTo code navigation.","nmap <silent> gd <Plug>(coc-definition)",>46
+|<"nmap <silent> gy <Plug>(coc-type-definition)","nmap <silent> gi <Plug>(coc-implementation)","nmap <silent> gr <Plug>(coc-references)","","\" Use K to show documentation in preview window.","nnoremap <silent> K :call <SID>show_documentation()<CR>","","function! s:show_documentation()","  if (index(['vim','help'], &filetype) >= 0)"
+"5	LINE	0
+	  for
+|3,0,5,1,1,0,1629680924,"  for"
+"6	LINE	0
+	  " Recently vim can merge signcolumn and number column into one
+|3,0,6,1,1,0,1629680695,"  \" Recently vim can merge signcolumn and number column into one"
+"7	LINE	0
+	:set softtabstop=2
+	:set shiftwidth=2
+|3,0,7,1,2,0,1629680328,":set softtabstop=2",":set shiftwidth=2"
+"8	LINE	0
+	
+|3,0,8,1,1,0,1629679894,""
+"9	LINE	0
+	// Adachi wa saiko
+|3,0,9,1,1,0,1629679850,"// Adachi wa saiko"
+"-	CHAR	0
+	init-statement
+|3,0,36,0,1,0,1629680931,"init-statement"
 
 # global variables:
 
 # File marks:
-'0  419  14  /data/data/com.termux/files/usr/include/c++/v1/ostream
-|4,48,419,14,1629500658,"/data/data/com.termux/files/usr/include/c++/v1/ostream"
-'1  54  32  /data/data/com.termux/files/usr/include/c++/v1/iostream
-|4,49,54,32,1629500567,"/data/data/com.termux/files/usr/include/c++/v1/iostream"
-'2  4  0  /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
-|4,50,4,0,1629489890,"/data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh"
-'3  17  53  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,51,17,53,1629484621,"/data/data/com.termux/files/usr/etc/bash.bashrc"
-'4  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,52,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
-'5  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,53,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
-'6  15  2  ~/.config/fish/config.fish
-|4,54,15,2,1629455887,"~/.config/fish/config.fish"
-'7  1  105  ~/index.html
-|4,55,1,105,1629454993,"~/index.html"
-'8  1  0  ~/test.cpp
-|4,56,1,0,1629454605,"~/test.cpp"
-'9  1  0  ~/test.cpp
-|4,57,1,0,1629454605,"~/test.cpp"
+'0  8  0  ~/test.cpp
+|4,48,8,0,1629701843,"~/test.cpp"
+'1  1  11  ~/test.cpp
+|4,49,1,11,1629701469,"~/test.cpp"
+'2  1  11  ~/test.cpp
+|4,50,1,11,1629701469,"~/test.cpp"
+'3  76  0  ~/.vimrc
+|4,51,76,0,1629700855,"~/.vimrc"
+'4  7  0  ~/test.cpp
+|4,52,7,0,1629700372,"~/test.cpp"
+'5  7  0  ~/test.cpp
+|4,53,7,0,1629700372,"~/test.cpp"
+'6  7  0  ~/test.cpp
+|4,54,7,0,1629700372,"~/test.cpp"
+'7  7  0  ~/test.cpp
+|4,55,7,0,1629700372,"~/test.cpp"
+'8  59  28  ~/.vimrc
+|4,56,59,28,1629700352,"~/.vimrc"
+'9  59  28  ~/.vimrc
+|4,57,59,28,1629700352,"~/.vimrc"
 
 # Jumplist (newest first):
--'  419  14  /data/data/com.termux/files/usr/include/c++/v1/ostream
-|4,39,419,14,1629500658,"/data/data/com.termux/files/usr/include/c++/v1/ostream"
--'  1  0  /data/data/com.termux/files/usr/include/c++/v1/ostream
-|4,39,1,0,1629500573,"/data/data/com.termux/files/usr/include/c++/v1/ostream"
--'  54  32  /data/data/com.termux/files/usr/include/c++/v1/iostream
-|4,39,54,32,1629500567,"/data/data/com.termux/files/usr/include/c++/v1/iostream"
--'  54  32  /data/data/com.termux/files/usr/include/c++/v1/iostream
-|4,39,54,32,1629500567,"/data/data/com.termux/files/usr/include/c++/v1/iostream"
--'  1  0  /data/data/com.termux/files/usr/include/c++/v1/iostream
-|4,39,1,0,1629500532,"/data/data/com.termux/files/usr/include/c++/v1/iostream"
--'  1  0  /data/data/com.termux/files/usr/include/c++/v1/iostream
-|4,39,1,0,1629500532,"/data/data/com.termux/files/usr/include/c++/v1/iostream"
--'  4  0  /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
-|4,39,4,0,1629489890,"/data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh"
--'  4  0  /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
-|4,39,4,0,1629489890,"/data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh"
--'  4  0  /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
-|4,39,4,0,1629489890,"/data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh"
--'  4  0  /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
-|4,39,4,0,1629489890,"/data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh"
--'  1  0  /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
-|4,39,1,0,1629489864,"/data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh"
--'  1  0  /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
-|4,39,1,0,1629489864,"/data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh"
--'  1  0  /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
-|4,39,1,0,1629489864,"/data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh"
--'  1  0  /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
-|4,39,1,0,1629489864,"/data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh"
--'  17  53  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,17,53,1629484621,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  17  53  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,17,53,1629484621,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  17  53  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,17,53,1629484621,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  17  53  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,17,53,1629484621,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  17  53  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,17,53,1629484621,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  17  53  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,17,53,1629484621,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  17  53  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,17,53,1629484621,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  17  53  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,17,53,1629484621,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  1  0  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,1,0,1629484558,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  1  0  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,1,0,1629484558,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  1  0  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,1,0,1629484558,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  1  0  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,1,0,1629484558,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  1  0  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,1,0,1629484558,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  1  0  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,1,0,1629484558,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  1  0  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,1,0,1629484558,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  1  0  /data/data/com.termux/files/usr/etc/bash.bashrc
-|4,39,1,0,1629484558,"/data/data/com.termux/files/usr/etc/bash.bashrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  8  11  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,8,11,1629484385,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  1  0  /data/data/com.termux/files/usr/etc/zshrc
-|4,39,1,0,1629484307,"/data/data/com.termux/files/usr/etc/zshrc"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  122  67  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,122,67,1629484257,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  1  0  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,1,0,1629484238,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  1  0  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,1,0,1629484238,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  1  0  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,1,0,1629484238,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  1  0  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,1,0,1629484238,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  1  0  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,1,0,1629484238,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
--'  1  0  /data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt
-|4,39,1,0,1629484238,"/data/data/com.termux/files/usr/doc/cmake-3.21/Copyright.txt"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629701843,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629701499,"~/test.cpp"
+-'  1  11  ~/test.cpp
+|4,39,1,11,1629701469,"~/test.cpp"
+-'  8  2  ~/test.cpp
+|4,39,8,2,1629701345,"~/test.cpp"
+-'  76  0  ~/.vimrc
+|4,39,76,0,1629700855,"~/.vimrc"
+-'  76  0  ~/.vimrc
+|4,39,76,0,1629700855,"~/.vimrc"
+-'  76  0  ~/.vimrc
+|4,39,76,0,1629700855,"~/.vimrc"
+-'  76  0  ~/.vimrc
+|4,39,76,0,1629700855,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700374,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700374,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700374,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700374,"~/.vimrc"
+-'  7  0  ~/test.cpp
+|4,39,7,0,1629700372,"~/test.cpp"
+-'  7  0  ~/test.cpp
+|4,39,7,0,1629700372,"~/test.cpp"
+-'  7  0  ~/test.cpp
+|4,39,7,0,1629700372,"~/test.cpp"
+-'  7  0  ~/test.cpp
+|4,39,7,0,1629700372,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629700370,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629700370,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629700355,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629700355,"~/test.cpp"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  59  28  ~/.vimrc
+|4,39,59,28,1629700352,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700334,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700334,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700334,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700334,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700334,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700334,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700334,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700334,"~/.vimrc"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629700332,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629700332,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629700332,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629700332,"~/test.cpp"
+-'  7  0  ~/test.cpp
+|4,39,7,0,1629700315,"~/test.cpp"
+-'  8  2  ~/test.cpp
+|4,39,8,2,1629700315,"~/test.cpp"
+-'  7  0  ~/test.cpp
+|4,39,7,0,1629700315,"~/test.cpp"
+-'  8  2  ~/test.cpp
+|4,39,8,2,1629700315,"~/test.cpp"
+-'  7  0  ~/test.cpp
+|4,39,7,0,1629700315,"~/test.cpp"
+-'  8  2  ~/test.cpp
+|4,39,8,2,1629700315,"~/test.cpp"
+-'  7  0  ~/test.cpp
+|4,39,7,0,1629700315,"~/test.cpp"
+-'  8  2  ~/test.cpp
+|4,39,8,2,1629700315,"~/test.cpp"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  60  31  ~/.vimrc
+|4,39,60,31,1629700287,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1629700180,"~/.vimrc"
+-'  62  0  ~/.vimrc
+|4,39,62,0,1629700178,"~/.vimrc"
+-'  62  0  ~/.vimrc
+|4,39,62,0,1629700178,"~/.vimrc"
+-'  62  0  ~/.vimrc
+|4,39,62,0,1629700178,"~/.vimrc"
+-'  62  0  ~/.vimrc
+|4,39,62,0,1629700178,"~/.vimrc"
 
 # History of marks within files (newest to oldest):
+
+> ~/test.cpp
+	*	1629701843	0
+	"	8	0
+	^	7	0
+	.	8	0
+	+	1	46
+	+	1	37
+	+	1	60
+	+	7	11
+	+	1	37
+	+	7	12
+	+	7	11
+	+	7	10
+	+	10	0
+	+	14	0
+	+	13	0
+	+	11	63
+	+	11	36
+	+	11	41
+	+	11	52
+	+	11	59
+	+	11	58
+	+	5	0
+	+	1	32
+	+	5	0
+	+	5	1
+	+	5	0
+	+	12	0
+	+	28	0
+	+	27	0
+	+	25	0
+	+	24	15
+	+	26	11
+	+	7	0
+	+	5	0
+	+	1	23
+	+	1	36
+	+	7	2
+	+	5	0
+	+	1	18
+	+	1	0
+	+	4	0
+	+	9	2
+	+	8	1
+	+	8	0
+	+	7	10
+	+	1	18
+	+	2	0
+	+	1	0
+	+	8	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/todo.txt
+	*	1629701560	0
+	"	4876	0
+
+> ~/abj.c
+	*	1629701466	0
+	"	1	0
+	^	1	15
+	.	1	14
+	+	1	20
+	+	1	0
+	+	1	2
+	+	1	1
+	+	2	0
+	+	1	14
+
+> ~/.test.cpp.swp
+	*	1629701356	0
+	"	1	82
+
+> ~/.vimrc
+	*	1629700855	0
+	"	76	0
+	^	59	29
+	.	60	32
+	+	34	41
+	+	38	16
+	+	37	0
+	+	38	16
+	+	39	0
+	+	38	15
+	+	41	0
+	+	41	8
+	+	41	20
+	+	41	21
+	+	41	15
+	+	41	10
+	+	41	15
+	+	41	20
+	+	41	21
+	+	33	8
+	+	32	1
+	+	34	19
+	+	34	15
+	+	34	19
+	+	34	0
+	+	33	1
+	+	4	0
+	+	33	19
+	+	32	0
+	+	33	0
+	+	33	48
+	+	30	12
+	+	31	13
+	+	30	22
+	+	31	23
+	+	42	4
+	+	42	0
+	+	42	5
+	+	42	58
+	+	42	0
+	+	103	0
+	+	101	0
+	+	100	1
+	+	102	1
+	+	103	0
+	+	42	0
+	+	133	33
+	+	101	0
+	+	102	0
+	+	103	0
+	+	124	16
+	+	42	0
+	+	101	0
+	+	41	26
+	+	41	16
+	+	43	19
+	+	42	21
+	+	44	25
+	+	45	0
+	+	42	0
+	+	43	13
+	+	44	13
+	+	75	1
+	+	43	14
+	+	44	14
+	+	43	14
+	+	76	25
+	+	77	0
+	+	43	12
+	+	44	12
+	+	78	0
+	+	38	12
+	+	37	12
+	+	36	12
+	+	37	12
+	+	40	0
+	+	72	20
+	+	73	0
+	+	37	0
+	+	23	12
+	+	58	25
+	+	58	24
+	+	52	22
+	+	58	25
+	+	63	0
+	+	59	0
+	+	59	27
+	+	66	0
+	+	59	18
+	+	59	29
+	+	59	18
+	+	59	0
+	+	59	44
+	+	60	19
+	+	60	21
+	+	60	0
+	+	59	0
+	+	59	22
+	+	61	0
+	+	60	0
+	+	59	27
+	+	60	29
+	+	59	28
+	+	60	32
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/options.txt
+	*	1629700854	0
+	"	8503	34
+
+> /data/data/com.termux/files/a.sh
+	*	1629682859	0
+	"	5	0
+	^	5	1
+	.	1	10
+	+	5	0
+	+	1	10
+
+> /data/data/com.termux/files/a.bash
+	*	1629682812	0
+	"	1	0
+	^	4	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/ftplugin/bash.vim
+	*	1629682807	0
+	"	23	0
+	^	23	0
+	.	23	21
+	+	21	0
+	+	22	0
+	+	23	21
+
+> /data/data/com.termux/files/usr/share/vim/vim82/ftplugin/c.vim
+	*	1629682703	0
+	"	70	0
+	^	71	0
+	.	70	31
+	+	69	0
+	+	69	24
+	+	69	0
+	+	6	13
+	+	6	0
+	+	5	0
+	+	7	0
+	+	69	0
+	+	71	13
+	+	70	31
+
+> /data/data/com.termux/files/usr/share/vim/vim82/ftplugin/cpp.vim
+	*	1629682575	0
+	"	20	31
+	^	20	32
+	.	19	31
+	+	19	0
+	+	20	0
+	+	19	31
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/intro.txt
+	*	1629677527	0
+	"	444	22
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/map.txt
+	*	1629676192	0
+	"	448	0
+
+> ~/t
+	*	1629671604	0
+	"	1	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/help.txt
+	*	1629665028	0
+	"	1	0
+
+> ~/.vim/syntax/cpp.vim
+	*	1629663482	0
+	"	5	0
+	^	5	0
+	.	2	0
+	+	1	0
+	+	2	0
+
+> ~/.vim/syntax/c.vim
+	*	1629663453	0
+	"	1	0
+	^	12	1
+	.	9	1
+	+	9	32
+	+	2	68
+	+	6	0
+	+	12	32
+	+	9	1
+
+> /data/data/com.termux/files/usr/share/vim/vim82/syntax/c.vim
+	*	1629663246	0
+	"	531	0
+	^	523	1
+	.	524	0
+	+	523	17
+	+	523	33
+	+	523	0
+	+	523	66
+	+	523	0
+	+	523	17
+	+	531	32
+	+	524	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/syntax/cpp.vim
+	*	1629663220	0
+	"	117	0
+	^	114	1
+	.	115	0
+	+	112	11
+	+	115	66
+	+	114	16
+	+	115	0
+	+	122	32
+	+	122	0
+	+	119	32
+	+	121	32
+	+	122	33
+	+	123	0
+	+	115	0
+
+> ~/test.c
+	*	1629659762	0
+	"	1	16
+	^	1	19
+	.	1	18
+	+	1	0
+	+	5	0
+	+	16	0
+	+	5	11
+	+	1	0
+	+	1	4
+	+	5	16
+	+	1	0
+	+	5	12
+	+	15	0
+	+	4	0
+	+	14	2
+	+	15	10
+	+	2	0
+	+	1	18
+
+> ~/.termux/termux.properties
+	*	1629654551	0
+	"	75	0
+	^	75	1
+	.	75	0
+	+	75	0
+
+> ~/myScripts/ghpush.sh
+	*	1629654530	0
+	"	6	22
+	^	6	23
+
+> ~/CPP/Cpp_Log/pointers_and_constexpr/main.cpp
+	*	1629652482	0
+	"	1	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/filetype.txt
+	*	1629612618	0
+	"	754	33
+
+> /data/data/com.termux/files/a
+	*	1629612031	0
+	"	1	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/usr_41.txt
+	*	1629612029	0
+	"	2606	31
+
+> ~/.vim/.vimrc
+	*	1629608998	0
+	"	1	0
+
+> /data/data/com.termux/files/usr/etc/tmux.conf
+	*	1629606844	0
+	"	5	40
+	^	5	41
+	.	5	40
+	+	5	40
+
+> ~/Termux/README.md
+	*	1629602592	0
+	"	8	31
+	^	8	32
+	.	2	31
+	+	4	92
+	+	5	18
+	+	6	11
+	+	4	89
+	+	5	20
+	+	6	13
+	+	2	31
+
+> ~/Termux/myScripts/cmp-shct.sh
+	*	1629602523	0
+	"	15	0
+	^	15	0
+	.	173	23
+	+	172	98
+	+	173	23
+
+> ~/Termux/myScripts/setup-cmp-shct.sh
+	*	1629594874	0
+	"	28	19
+	^	28	20
+	.	28	19
+	+	13	11
+	+	14	16
+	+	16	89
+	+	18	0
+	+	7	60
+	+	28	19
+
+> /data/data/com.termux/files/usr/var/lib/dpkg/info/neovim.conffiles
+	*	1629592034	0
+	"	1	0
+
+> ~/CPP/Cpp_Log/adding_all_input/main.cpp
+	*	1629589338	0
+	"	5	24
+
+> ~/a
+	*	1629589279	0
+	"	1	0
+
+> ~/CPP/Cpp_Log/ostream
+	*	1629571843	0
+	"	205	0
+
+> ~/.config/fish/config.fish
+	*	1629570178	0
+	"	15	2
+	^	15	3
+	.	5	59
+	+	14	66
+	+	5	59
+
+> ~/.bashrc
+	*	1629570146	0
+	"	11	12
+	^	11	13
+	.	3	12
+	+	12	0
+	+	3	12
+
+> ~/.config/fish/functions/fish_greeting.fish
+	*	1629568233	0
+	"	3	2
+
+> ~/tst.sh
+	*	1629568182	0
+	"	1	25
+	^	1	25
+	.	1	25
+	+	1	9
+	+	2	6
+	+	1	9
+	+	2	6
+	+	1	26
+	+	2	5
+	+	1	25
+
+> ~/welcome.sh
+	*	1629567719	0
+	"	14	3
+	^	14	4
+	.	14	4
+	+	15	4
+	+	16	4
+	+	17	4
+	+	5	4
+	+	6	3
+	+	7	5
+	+	8	6
+	+	9	6
+	+	10	4
+	+	11	5
+	+	12	4
+	+	5	3
+	+	6	3
+	+	8	0
+	+	7	3
+	+	8	3
+	+	9	3
+	+	10	3
+	+	11	3
+	+	12	3
+	+	1	2
+	+	15	14
+	+	16	129
+	+	17	13
+	+	17	103
+	+	5	23
+	+	6	21
+	+	7	25
+	+	8	27
+	+	9	27
+	+	10	23
+	+	11	25
+	+	12	21
+	+	15	24
+	+	16	74
+	+	14	6
+	+	1	41
+	+	15	13
+	+	14	6
+	+	15	109
+	+	16	145
+	+	17	13
+	+	17	110
+	+	18	4
+	+	14	4
+
+> ~/myScripts/welcome.sh
+	*	1629565863	0
+	"	4	0
+	^	1	8
+	.	1	7
+	+	1	7
+
+> ~/Termux/myScripts/cmp-shct-setup.sh
+	*	1629565273	0
+	"	20	6
+	^	20	7
+	.	15	0
+	+	9	1
+	+	9	25
+	+	9	1
+	+	9	19
+	+	13	0
+	+	9	52
+	+	9	0
+	+	9	1
+	+	9	0
+	+	11	40
+	+	14	86
+	+	10	25
+	+	25	8
+	+	13	40
+	+	15	0
+
+> ~/ci.sh
+	*	1629564467	0
+	"	2	80
+	^	2	82
+	.	2	79
+	+	1	26
+	+	1	27
+	+	1	24
+	+	1	26
+	+	1	12
+	+	1	22
+	+	1	3
+	+	1	2
+	+	1	0
+	+	1	2
+	+	1	26
+	+	1	17
+	+	1	27
+	+	7	1
+	+	1	18
+	+	6	2
+	+	1	16
+	+	2	79
+
+> ~/Termux/myScripts/compiler_shortcuts_setup.sh
+	*	1629563163	0
+	"	1	8
+	^	1	9
+	.	24	16
+	+	18	19
+	+	4	0
+	+	6	36
+	+	7	59
+	+	6	64
+	+	8	31
+	+	7	76
+	+	10	15
+	+	6	61
+	+	10	36
+	+	12	32
+	+	13	91
+	+	17	32
+	+	18	70
+	+	21	26
+	+	22	3
+	+	24	16
+
+> ~/downloads/getscript.vba
+	*	1629519567	0
+	"	1178	29
+
+> ~/workshop/test.sh
+	*	1629518509	0
+	"	15	0
+
+> ~/workshop/space.sh
+	*	1629518488	0
+	"	1	0
+
+> ~/workshop/ret.sh
+	*	1629518466	0
+	"	19	0
+
+> ~/workshop/mkdir.sh
+	*	1629518445	0
+	"	1	0
+
+> ~/workshop/list.sh
+	*	1629518432	0
+	"	1	0
+
+> ~/workshop/ld.sh
+	*	1629518384	0
+	"	15	0
+
+> ~/workshop/fn.sh
+	*	1629518267	0
+	"	1	0
+
+> ~/workshop/fc.sh
+	*	1629518258	0
+	"	7	0
+
+> ~/workshop/exit.sh
+	*	1629518242	0
+	"	8	0
+
+> ~/a.test
+	*	1629517968	0
+	"	9	0
+	^	9	2
+	.	8	3
+	+	1	0
+	+	8	4
+	+	12	4
+	+	10	0
+	+	11	0
+	+	8	3
+
+> ~/workshop/z.c
+	*	1629517748	0
+	"	1	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/pi_getscript.txt
+	*	1629517675	0
+	"	278	45
+
+> ~/.vim/GetLatest/GetLatestVimScripts.dat
+	*	1629517525	0
+	"	1	0
+	.	19	0
+	+	19	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	7	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	17	0
+	+	18	0
+	+	19	0
+
+> ~/.vim/.VimballRecord
+	*	1629516848	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/downloads/a.test
+	*	1629516780	0
+	"	1	0
+
+> ~/CPP/Cpp_Log/hello_world/main.cpp
+	*	1629515670	0
+	"	8	0
+
+> ~/CPP/Cpp_Log/hello_world/main
+	*	1629515377	0
+	"	15	0
+
+> ~/CPP/Cpp_Log/hello_world/linker_args_for_main.txt
+	*	1629515325	0
+	"	1	0
+
+> ~/Termux/.git/MERGE_MSG
+	*	1629514160	0
+	"	7	3
+	^	7	4
+	.	7	3
+	+	7	3
 
 > /data/data/com.termux/files/usr/include/c++/v1/ostream
 	*	1629500650	0
@@ -293,10 +1249,6 @@ $
 	*	1629484253	0
 	"	122	67
 
-> ~/.config/fish/config.fish
-	*	1629455882	0
-	"	15	2
-
 > ~/index.html
 	*	1629454990	0
 	"	1	105
@@ -304,7 +1256,3 @@ $
 	.	1	95
 	+	1	0
 	+	1	95
-
-> ~/test.cpp
-	*	1629454598	0
-	"	1	0
