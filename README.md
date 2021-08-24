@@ -5,4 +5,10 @@
  - ```chmod +x setup-cmp-shct.sh```
  - ```./setup-cmp-shct.sh```
 
-now run ```c --help``` to know the options
+ now run ```c --help``` to know the options
+
+## Termux setup
+ - ```wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/setup-lolicon.sh```
+ - ```chmod +x setup-lolicon.sh```
+ - ```./setup-lolicon.sh```
+
