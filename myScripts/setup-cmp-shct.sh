@@ -2,7 +2,7 @@
 NONE='\033[00m'
 BGREEN='\033[01;32m'
 
-echo "${BGREEN}Setup started...${NONE}"
+echo "${BGREEN}Cmp-Shct Setup started...${NONE}"
 echo "${BGREEN}Adding the its-pointless repo to install gcc...${NONE}"
 wget https://its-pointless.github.io/setup-pointless-repo.sh
 chmod +x setup-pointless-repo.sh
