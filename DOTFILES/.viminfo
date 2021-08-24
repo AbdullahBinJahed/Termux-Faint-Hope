@@ -11,12 +11,85 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/this
+~MSle0~/^
+
+# Last Substitute Search Pattern:
+~MSle0&^
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:Ex
+|2,0,1629787169,,"Ex"
+:hi Function
+|2,0,1629786801,,"hi Function"
+:wq
+|2,0,1629785640,,"wq"
+:echo $VIMRUNTIME
+|2,0,1629785238,,"echo $VIMRUNTIME"
+:colorscheme lucid
+|2,0,1629784938,,"colorscheme lucid"
+:scriptnames
+|2,0,1629784867,,"scriptnames"
+:PlugClean
+|2,0,1629784401,,"PlugClean"
+:PlugStatus
+|2,0,1629784351,,"PlugStatus"
+:Pexplore
+|2,0,1629784341,,"Pexplore"
+:Plug
+|2,0,1629784335,,"Plug"
+:colorscheme
+|2,0,1629784039,,"colorscheme"
+:Explore
+|2,0,1629783978,,"Explore"
+:tabe
+|2,0,1629782709,,"tabe"
+:resize +2
+|2,0,1629781739,,"resize +2"
+:w
+|2,0,1629781401,,"w"
+:s!/^/replace/
+|2,0,1629779203,,"s!/^/replace/"
+:s/^/replace!!
+|2,0,1629779172,,"s/^/replace!!"
+:s/^/replace/!!
+|2,0,1629779153,,"s/^/replace/!!"
+:s/^/replace/
+|2,0,1629779092,,"s/^/replace/"
+:'<,'>s!^!//!
+|2,0,1629779000,,"'<,'>s!^!//!"
+:%s!^!//!
+|2,0,1629778959,,"%s!^!//!"
+:verbose imap <C-Y>
+|2,0,1629778363,,"verbose imap <C-Y>"
+:verbose impa <C-Y>
+|2,0,1629778350,,"verbose impa <C-Y>"
+:verbose imap <C-E>
+|2,0,1629778335,,"verbose imap <C-E>"
+:verbose imap <C-Q>
+|2,0,1629778315,,"verbose imap <C-Q>"
+:%
+|2,0,1629706349,,"%"
+:w !termux-clipboard-set
+|2,0,1629706073,,"w !termux-clipboard-set"
+:xclip -i -sel c
+|2,0,1629706032,,"xclip -i -sel c"
+:w !pbcopy
+|2,0,1629705468,,"w !pbcopy"
+:"+y
+|2,0,1629705299,,"\"+y"
+:help clipboard
+|2,0,1629705034,,"help clipboard"
+:help +clipboard
+|2,0,1629704971,,"help +clipboard"
+:"*y
+|2,0,1629704946,,"\"*y"
+:help keymapping
+|2,0,1629703331,,"help keymapping"
+:help 'keymap'
+|2,0,1629703312,,"help 'keymap'"
 :help autosave
 |2,0,1629701504,,"help autosave"
 :-O
@@ -55,8 +128,6 @@ $
 |2,0,1629677474,,"help key-notation"
 :Te
 |2,0,1629676901,,"Te"
-:Explore
-|2,0,1629676614,,"Explore"
 :tabe 
 |2,0,1629676519,,"tabe "
 :help key-mapping
@@ -95,8 +166,6 @@ $
 |2,0,1629659151,,"PlugInstall"
 :wq!
 |2,0,1629622513,,"wq!"
-:wq
-|2,0,1629622504,,"wq"
 :q!
 |2,0,1629622386,,"q!"
 :echo $TERM
@@ -125,14 +194,10 @@ $
 |2,0,1629604684,,"verbose imap <cr>"
 :help map
 |2,0,1629604195,,"help map"
-:help keymapping
-|2,0,1629604189,,"help keymapping"
 :CocEnable
 |2,0,1629603804,,"CocEnable"
 :CocList extensions
 |2,0,1629590273,,"CocList extensions"
-:PlugStatus
-|2,0,1629590224,,"PlugStatus"
 :CocInstall coc-emmet
 |2,0,1629589899,,"CocInstall coc-emmet"
 :CocInstall coc-dot-complete
@@ -149,8 +214,6 @@ $
 |2,0,1629589146,,"checkhealth"
 ::PlugInstall
 |2,0,1629588959,,":PlugInstall"
-:w
-|2,0,1629564409,,"w"
 :Emmet lorem100
 |2,0,1629517935,,"Emmet lorem100"
 :Emmet lorem15
@@ -190,7 +253,15 @@ $
 
 # Search String History (newest to oldest):
 ? @$
-|2,1,1629701359,,"@$"
+|2,1,1629789186,,"@$"
+? ^
+|2,1,1629779758,,"^"
+? /^/replace/
+|2,1,1629779203,,"/^/replace/"
+?/<C-Y>
+|2,1,1629778437,47,"<C-Y>"
+?/Ctrl
+|2,1,1629778388,47,"Ctrl"
 ?/this
 |2,1,1629669647,47,"this"
 ?/v
@@ -205,354 +276,407 @@ $
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@n
+|2,3,1629784417,,"n"
+@cursor.vim
+|2,3,1629783474,,"cursor.vim"
+@init.vim
+|2,3,1629782232,,"init.vim"
+@plugin
+|2,3,1629782145,,"plugin"
+@general
+|2,3,1629781393,,"general"
+@c.vim
+|2,3,1629702761,,"c.vim"
+@ftplugin
+|2,3,1629702630,,"ftplugin"
 @html:5
 |2,3,1629454746,,"html:5"
 
 # Debug Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	  for (int i; i < 6; ++i)
-|3,1,0,1,1,0,1629701360,"  for (int i; i < 6; ++i)"
-"1	LINE	0
-	//// this is a comment
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	////a//
-	////a//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-|3,0,1,1,20,0,1629682420,"//// this is a comment","//","//","//","//","//","//","//","//","//","////a//","////a//","//","//","//","//","//","//","//","//"
+"0	LINE	0
+	syn match    cCustomParen    "?=(" contains=cParen contains=cCppParen
+	syn match    cCustomFunc     "\w\+\s*(\@=" contains=cCustomParen
+	syn match    cCustomScope    "::"
+	syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
+	
+	hi def cCustomParen gui=bold guifg=red
+	hi def cCustomFunc  gui=bold guifg=yellow
+	hi def cCustomClass gui=reverse guifg=green
+	hi def cCustomScope gui=bold guifg=red
+	
+|3,0,0,1,10,0,1629789439,"syn match    cCustomParen    \"?=(\" contains=cParen contains=cCppParen","syn match    cCustomFunc     \"\\w\\+\\s*(\\@=\" contains=cCustomParen","syn match    cCustomScope    \"::\"","syn match    cCustomClass    \"\\w\\+\\s*::\" contains=cCustomScope","","hi def cCustomParen gui=bold guifg=red","hi def cCustomFunc  gui=bold guifg=yellow","hi def cCustomClass gui=reverse guifg=green","hi def cCustomScope gui=bold guifg=red",""
+""1	LINE	0
+	syn match    cCustomParen    "?=(" contains=cParen contains=cCppParen
+	syn match    cCustomFunc     "\w\+\s*(\@=" contains=cCustomParen
+	syn match    cCustomScope    "::"
+	syn match    cCustomClass    "\w\+\s*::" contains=cCustomScope
+	
+	hi def cCustomParen gui=bold guifg=red
+	hi def cCustomFunc  gui=bold guifg=cyan
+	hi def cCustomClass gui=reverse guifg=yellow
+	hi def cCustomScope gui=bold guifg=blue
+	
+|3,1,1,1,10,0,1629789457,"syn match    cCustomParen    \"?=(\" contains=cParen contains=cCppParen","syn match    cCustomFunc     \"\\w\\+\\s*(\\@=\" contains=cCustomParen","syn match    cCustomScope    \"::\"","syn match    cCustomClass    \"\\w\\+\\s*::\" contains=cCustomScope","","hi def cCustomParen gui=bold guifg=red","hi def cCustomFunc  gui=bold guifg=cyan","hi def cCustomClass gui=reverse guifg=yellow","hi def cCustomScope gui=bold guifg=blue",""
 "2	LINE	0
-	"#### Undo and Redo ####"
-|3,0,2,1,1,0,1629682076,"\"#### Undo and Redo ####\""
+	source ~/.lolicon/vim/syntax/lolicon_syntax.vim
+|3,0,2,1,1,0,1629789288,"source ~/.lolicon/vim/syntax/lolicon_syntax.vim"
 "3	LINE	0
-	:inoremap <C-z> <ESC><Space>u
-	:noremap! <C-z> uabj
-	:noremap <C-S-z> <ESC><C-r>
-	:noremap! <C-S-z> <ESC><C-r>
-|3,0,3,1,4,0,1629681595,":inoremap <C-z> <ESC><Space>u",":noremap! <C-z> uabj",":noremap <C-S-z> <ESC><C-r>",":noremap! <C-S-z> <ESC><C-r>"
+	colorscheme lucid
+|3,0,3,1,1,0,1629789173,"colorscheme lucid"
 "4	LINE	0
-	"#### coc.nvim ####"
-	set encoding=utf-8
-	set hidden
-	set nobackup
-	set nowritebackup
-	set cmdheight=2
-	set updatetime=300
-	set shortmess+=c
-	if has("nvim-0.5.0") || has("patch-8.1.1564")
-	  set signcolumn=number
-	else
-	  set signcolumn=yes
-	endif
-	" Use tab for trigger completion with characters ahead and navigate.
-	inoremap <silent><expr> <TAB>
-	      \ pumvisible() ? "\<C-n>" :
-	      \ <SID>check_back_space() ? "\<TAB>" :
-	      \ coc#refresh()
-	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-	
-	function! s:check_back_space() abort
-	  let col = col('.') - 1
-	  return !col || getline('.')[col - 1]  =~# '\s'
-	endfunction
-	
-	" Use <c-space> to trigger completion.
-	if has('nvim')
-	  inoremap <silent><expr> <c-space> coc#refresh()
-	else
-	  inoremap <silent><expr> <c-@> coc#refresh()
-	endif
-	inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-	                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-	
-	" Use `[g` and `]g` to navigate diagnostics
-	" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-	nmap <silent> [g <Plug>(coc-diagnostic-prev)
-	nmap <silent> ]g <Plug>(coc-diagnostic-next)
-	
-	" GoTo code navigation.
-	nmap <silent> gd <Plug>(coc-definition)
-	nmap <silent> gy <Plug>(coc-type-definition)
-	nmap <silent> gi <Plug>(coc-implementation)
-	nmap <silent> gr <Plug>(coc-references)
-	
-	" Use K to show documentation in preview window.
-	nnoremap <silent> K :call <SID>show_documentation()<CR>
-	
-	function! s:show_documentation()
-	  if (index(['vim','help'], &filetype) >= 0)
-|3,0,4,1,50,0,1629681331,"\"#### coc.nvim ####\"","set encoding=utf-8","set hidden","set nobackup","set nowritebackup","set cmdheight=2","set updatetime=300","set shortmess+=c","if has(\"nvim-0.5.0\") || has(\"patch-8.1.1564\")","  set signcolumn=number","else","  set signcolumn=yes","endif","\" Use tab for trigger completion with characters ahead and navigate.","inoremap <silent><expr> <TAB>","      \\ pumvisible() ? \"\\<C-n>\" :",>50
-|<"      \\ <SID>check_back_space() ? \"\\<TAB>\" :","      \\ coc#refresh()","inoremap <expr><S-TAB> pumvisible() ? \"\\<C-p>\" : \"\\<C-h>\"","","function! s:check_back_space() abort","  let col = col('.') - 1","  return !col || getline('.')[col - 1]  =~# '\\s'","endfunction","","\" Use <c-space> to trigger completion.","if has('nvim')","  inoremap <silent><expr> <c-space> coc#refresh()","else","  inoremap <silent><expr> <c-@> coc#refresh()","endif",>67
-|<"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()","                              \\: \"\\<C-g>u\\<CR>\\<c-r>=coc#on_enter()\\<CR>\"","","\" Use `[g` and `]g` to navigate diagnostics","\" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.","nmap <silent> [g <Plug>(coc-diagnostic-prev)","nmap <silent> ]g <Plug>(coc-diagnostic-next)","","\" GoTo code navigation.","nmap <silent> gd <Plug>(coc-definition)",>46
-|<"nmap <silent> gy <Plug>(coc-type-definition)","nmap <silent> gi <Plug>(coc-implementation)","nmap <silent> gr <Plug>(coc-references)","","\" Use K to show documentation in preview window.","nnoremap <silent> K :call <SID>show_documentation()<CR>","","function! s:show_documentation()","  if (index(['vim','help'], &filetype) >= 0)"
+	colorscheme lucid
+|3,0,4,1,1,0,1629789101,"colorscheme lucid"
 "5	LINE	0
-	  for
-|3,0,5,1,1,0,1629680924,"  for"
+	filetype plugin indent on
+|3,0,5,1,1,0,1629788958,"filetype plugin indent on"
 "6	LINE	0
-	  " Recently vim can merge signcolumn and number column into one
-|3,0,6,1,1,0,1629680695,"  \" Recently vim can merge signcolumn and number column into one"
-"7	LINE	0
-	:set softtabstop=2
-	:set shiftwidth=2
-|3,0,7,1,2,0,1629680328,":set softtabstop=2",":set shiftwidth=2"
-"8	LINE	0
 	
-|3,0,8,1,1,0,1629679894,""
+	"""""" One """"""
+	"let g:airline_theme='one'
+	"set background=dark
+	"let g:one_allow_italics = 1
+	":colorscheme one
+	"call one#highlight('vimLineComment', 'cccccc', '', 'italic')
+	
+	"if (empty($TMUX))
+	"  if (has("nvim"))
+	"    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+	"    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	"  endif
+	"endif
+	
+|3,0,6,1,15,0,1629788898,"","\"\"\"\"\"\" One \"\"\"\"\"\"","\"let g:airline_theme='one'","\"set background=dark","\"let g:one_allow_italics = 1","\":colorscheme one","\"call one#highlight('vimLineComment', 'cccccc', '', 'italic')","","\"if (empty($TMUX))","\"  if (has(\"nvim\"))","\"    \"For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >","\"    let $NVIM_TUI_ENABLE_TRUE_COLOR=1","\"  endif","\"endif",""
+"7	LINE	0
+	" augroup autosave
+	"   autocmd!
+	"   autocmd BufRead * if &filetype == "" | setlocal ft=text | endif
+	"   autocmd FileType * autocmd TextChanged,InsertLeave <buffer> if &readonly == 0 | silent write | endif
+	" augroup END
+|3,0,7,1,5,0,1629788882,"\" augroup autosave","\"   autocmd!","\"   autocmd BufRead * if &filetype == \"\" | setlocal ft=text | endif","\"   autocmd FileType * autocmd TextChanged,InsertLeave <buffer> if &readonly == 0 | silent write | endif","\" augroup END"
+"8	LINE	0
+	" augroup autosave
+	"   autocmd!
+	"   autocmd BufRead * if &filetype == "" | setlocal ft=text | endif
+	"   autocmd FileType * autocmd TextChanged,InsertLeave <buffer> if &readonly == 0 | silent write | endif
+	" augroup END
+|3,0,8,1,5,0,1629788821,"\" augroup autosave","\"   autocmd!","\"   autocmd BufRead * if &filetype == \"\" | setlocal ft=text | endif","\"   autocmd FileType * autocmd TextChanged,InsertLeave <buffer> if &readonly == 0 | silent write | endif","\" augroup END"
 "9	LINE	0
-	// Adachi wa saiko
-|3,0,9,1,1,0,1629679850,"// Adachi wa saiko"
+	hi def cCustomParen gui=bold guifg=red
+	hi def cCustomFunc  gui=bold guifg=#0000FF
+	hi def cCustomClass gui=reverse guifg=yellowgreen
+	hi def cCustomScope gui=bold guifg=cyan
+	
+|3,0,9,1,5,0,1629788243,"hi def cCustomParen gui=bold guifg=red","hi def cCustomFunc  gui=bold guifg=#0000FF","hi def cCustomClass gui=reverse guifg=yellowgreen","hi def cCustomScope gui=bold guifg=cyan",""
 "-	CHAR	0
-	init-statement
-|3,0,36,0,1,0,1629680931,"init-statement"
+	"
+|3,0,36,0,1,0,1629782550,"\""
 
 # global variables:
 
 # File marks:
-'0  8  0  ~/test.cpp
-|4,48,8,0,1629701843,"~/test.cpp"
-'1  1  11  ~/test.cpp
-|4,49,1,11,1629701469,"~/test.cpp"
-'2  1  11  ~/test.cpp
-|4,50,1,11,1629701469,"~/test.cpp"
-'3  76  0  ~/.vimrc
-|4,51,76,0,1629700855,"~/.vimrc"
-'4  7  0  ~/test.cpp
-|4,52,7,0,1629700372,"~/test.cpp"
-'5  7  0  ~/test.cpp
-|4,53,7,0,1629700372,"~/test.cpp"
-'6  7  0  ~/test.cpp
-|4,54,7,0,1629700372,"~/test.cpp"
-'7  7  0  ~/test.cpp
-|4,55,7,0,1629700372,"~/test.cpp"
-'8  59  28  ~/.vimrc
-|4,56,59,28,1629700352,"~/.vimrc"
-'9  59  28  ~/.vimrc
-|4,57,59,28,1629700352,"~/.vimrc"
+'0  430  0  ~/Termux/DOTFILES/.viminfo
+|4,48,430,0,1629789556,"~/Termux/DOTFILES/.viminfo"
+'1  7  0  ~/abj.c
+|4,49,7,0,1629789480,"~/abj.c"
+'2  10  0  ~/.vim/syntax/c.vim
+|4,50,10,0,1629789466,"~/.vim/syntax/c.vim"
+'3  1  0  ~/.vim/syntax/cpp.vim
+|4,51,1,0,1629789442,"~/.vim/syntax/cpp.vim"
+'4  1  0  ~/test.cpp
+|4,52,1,0,1629789421,"~/test.cpp"
+'5  8  37  ~/.vim/syntax/cpp.vim
+|4,53,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+'6  8  37  ~/.vim/syntax/cpp.vim
+|4,54,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+'7  8  0  ~/test.cpp
+|4,55,8,0,1629789396,"~/test.cpp"
+'8  8  0  ~/test.cpp
+|4,56,8,0,1629789396,"~/test.cpp"
+'9  9  34  ~/.vim/syntax/cpp.vim
+|4,57,9,34,1629789390,"~/.vim/syntax/cpp.vim"
 
 # Jumplist (newest first):
+-'  430  0  ~/Termux/DOTFILES/.viminfo
+|4,39,430,0,1629789556,"~/Termux/DOTFILES/.viminfo"
+-'  1  0  ~/Termux/DOTFILES/.viminfo
+|4,39,1,0,1629789533,"~/Termux/DOTFILES/.viminfo"
+-'  7  0  ~/abj.c
+|4,39,7,0,1629789480,"~/abj.c"
+-'  7  0  ~/abj.c
+|4,39,7,0,1629789480,"~/abj.c"
+-'  1  0  ~/abj.c
+|4,39,1,0,1629789475,"~/abj.c"
+-'  1  0  ~/abj.c
+|4,39,1,0,1629789475,"~/abj.c"
+-'  10  0  ~/.vim/syntax/c.vim
+|4,39,10,0,1629789466,"~/.vim/syntax/c.vim"
+-'  10  0  ~/.vim/syntax/c.vim
+|4,39,10,0,1629789466,"~/.vim/syntax/c.vim"
+-'  10  0  ~/.vim/syntax/c.vim
+|4,39,10,0,1629789466,"~/.vim/syntax/c.vim"
+-'  10  0  ~/.vim/syntax/c.vim
+|4,39,10,0,1629789466,"~/.vim/syntax/c.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789442,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789442,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789442,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789442,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789442,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789442,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789442,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789442,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  1  0  ~/test.cpp
+|4,39,1,0,1629789421,"~/test.cpp"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  8  37  ~/.vim/syntax/cpp.vim
+|4,39,8,37,1629789406,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
+-'  1  0  ~/.vim/syntax/cpp.vim
+|4,39,1,0,1629789398,"~/.vim/syntax/cpp.vim"
 -'  8  0  ~/test.cpp
-|4,39,8,0,1629701843,"~/test.cpp"
--'  1  0  ~/test.cpp
-|4,39,1,0,1629701499,"~/test.cpp"
--'  1  11  ~/test.cpp
-|4,39,1,11,1629701469,"~/test.cpp"
--'  8  2  ~/test.cpp
-|4,39,8,2,1629701345,"~/test.cpp"
--'  76  0  ~/.vimrc
-|4,39,76,0,1629700855,"~/.vimrc"
--'  76  0  ~/.vimrc
-|4,39,76,0,1629700855,"~/.vimrc"
--'  76  0  ~/.vimrc
-|4,39,76,0,1629700855,"~/.vimrc"
--'  76  0  ~/.vimrc
-|4,39,76,0,1629700855,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700374,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700374,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700374,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700374,"~/.vimrc"
--'  7  0  ~/test.cpp
-|4,39,7,0,1629700372,"~/test.cpp"
--'  7  0  ~/test.cpp
-|4,39,7,0,1629700372,"~/test.cpp"
--'  7  0  ~/test.cpp
-|4,39,7,0,1629700372,"~/test.cpp"
--'  7  0  ~/test.cpp
-|4,39,7,0,1629700372,"~/test.cpp"
+|4,39,8,0,1629789396,"~/test.cpp"
 -'  8  0  ~/test.cpp
-|4,39,8,0,1629700370,"~/test.cpp"
+|4,39,8,0,1629789396,"~/test.cpp"
 -'  8  0  ~/test.cpp
-|4,39,8,0,1629700370,"~/test.cpp"
--'  1  0  ~/test.cpp
-|4,39,1,0,1629700355,"~/test.cpp"
--'  1  0  ~/test.cpp
-|4,39,1,0,1629700355,"~/test.cpp"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  59  28  ~/.vimrc
-|4,39,59,28,1629700352,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700334,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700334,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700334,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700334,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700334,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700334,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700334,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700334,"~/.vimrc"
--'  1  0  ~/test.cpp
-|4,39,1,0,1629700332,"~/test.cpp"
--'  1  0  ~/test.cpp
-|4,39,1,0,1629700332,"~/test.cpp"
--'  1  0  ~/test.cpp
-|4,39,1,0,1629700332,"~/test.cpp"
--'  1  0  ~/test.cpp
-|4,39,1,0,1629700332,"~/test.cpp"
--'  7  0  ~/test.cpp
-|4,39,7,0,1629700315,"~/test.cpp"
--'  8  2  ~/test.cpp
-|4,39,8,2,1629700315,"~/test.cpp"
--'  7  0  ~/test.cpp
-|4,39,7,0,1629700315,"~/test.cpp"
--'  8  2  ~/test.cpp
-|4,39,8,2,1629700315,"~/test.cpp"
--'  7  0  ~/test.cpp
-|4,39,7,0,1629700315,"~/test.cpp"
--'  8  2  ~/test.cpp
-|4,39,8,2,1629700315,"~/test.cpp"
--'  7  0  ~/test.cpp
-|4,39,7,0,1629700315,"~/test.cpp"
--'  8  2  ~/test.cpp
-|4,39,8,2,1629700315,"~/test.cpp"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  60  31  ~/.vimrc
-|4,39,60,31,1629700287,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1629700180,"~/.vimrc"
--'  62  0  ~/.vimrc
-|4,39,62,0,1629700178,"~/.vimrc"
--'  62  0  ~/.vimrc
-|4,39,62,0,1629700178,"~/.vimrc"
--'  62  0  ~/.vimrc
-|4,39,62,0,1629700178,"~/.vimrc"
--'  62  0  ~/.vimrc
-|4,39,62,0,1629700178,"~/.vimrc"
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
+-'  8  0  ~/test.cpp
+|4,39,8,0,1629789396,"~/test.cpp"
 
 # History of marks within files (newest to oldest):
 
+> ~/Termux/DOTFILES/.viminfo
+	*	1629789556	0
+	"	430	0
+
+> ~/abj.c
+	*	1629789480	0
+	"	7	0
+	^	6	0
+	.	6	0
+	+	1	20
+	+	1	0
+	+	1	2
+	+	1	1
+	+	1	15
+	+	1	16
+	+	1	18
+	+	1	17
+	+	1	20
+	+	1	24
+	+	1	21
+	+	1	17
+	+	1	21
+	+	1	17
+	+	1	23
+	+	8	0
+	+	2	0
+	+	6	0
+
+> ~/.vim/syntax/c.vim
+	*	1629789466	0
+	"	10	0
+	^	10	0
+	.	11	0
+	+	10	32
+	+	10	68
+	+	10	0
+	+	12	32
+	+	10	0
+	+	10	6
+	+	10	0
+	+	11	0
+	+	12	0
+	+	10	44
+	+	10	0
+	+	11	39
+	+	10	38
+	+	10	44
+	+	10	0
+	+	1	0
+	+	11	0
+
+> ~/.vim/syntax/cpp.vim
+	*	1629789442	0
+	"	1	0
+	^	9	38
+	.	9	37
+	+	1	0
+	+	2	0
+	+	5	0
+	+	11	0
+	+	3	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	2	0
+	+	9	41
+	+	7	40
+	+	8	42
+	+	9	37
+
 > ~/test.cpp
-	*	1629701843	0
-	"	8	0
-	^	7	0
-	.	8	0
+	*	1629789421	0
+	"	1	0
+	^	12	5
+	.	11	6
 	+	1	46
 	+	1	37
 	+	1	60
@@ -598,136 +722,483 @@ $
 	+	2	0
 	+	1	0
 	+	8	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	3	0
+	+	2	0
+	+	28	3
+	+	29	0
+	+	11	6
+
+> ~/.lolicon/vim/general/colorscheme.vim
+	*	1629789298	0
+	"	1	16
+	^	1	17
+	.	2	0
+	+	1	17
+	+	2	0
+
+> ~/.vimrc
+	*	1629789295	0
+	"	7	0
+	^	6	45
+	.	6	0
+	+	1	19
+	+	1	21
+	+	1	25
+	+	1	0
+	+	1	13
+	+	1	1
+	+	1	14
+	+	1	25
+	+	1	0
+	+	1	12
+	+	1	0
+	+	1	12
+	+	1	0
+	+	1	20
+	+	1	0
+	+	1	12
+	+	1	25
+	+	1	24
+	+	1	22
+	+	1	25
+	+	1	0
+	+	1	27
+	+	1	0
+	+	1	18
+	+	1	29
+	+	1	18
+	+	1	0
+	+	1	44
+	+	1	19
+	+	1	21
+	+	1	0
+	+	1	22
+	+	1	0
+	+	1	27
+	+	1	29
+	+	1	28
+	+	1	32
+	+	1	0
+	+	1	25
+	+	1	20
+	+	1	8
+	+	1	36
+	+	1	0
+	+	1	25
+	+	1	0
+	+	1	17
+	+	1	0
+	+	7	0
+	+	1	0
+	+	1	37
+	+	7	13
+	+	7	0
+	+	1	32
+	+	1	0
+	+	7	0
+	+	1	0
+	+	1	38
+	+	1	17
+	+	1	0
+	+	7	0
+	+	1	35
+	+	1	0
+	+	7	0
+	+	1	20
+	+	1	16
+	+	1	0
+	+	3	0
+	+	1	0
+	+	1	16
+	+	7	32
+	+	1	0
+	+	1	41
+	+	3	36
+	+	2	0
+	+	4	0
+	+	7	0
+	+	1	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	7	0
+	+	6	0
+	+	7	0
+	+	6	46
+	+	7	0
+	+	1	0
+	+	7	0
+	+	7	17
+	+	1	0
+	+	2	0
+	+	7	0
+	+	8	0
+	+	6	0
+
+> ~/.lolicon/vim/general/settings.vim
+	*	1629789087	0
+	"	44	21
+	^	44	22
+	.	46	0
+	+	19	71
+	+	27	0
+	+	42	23
+	+	42	45
+	+	42	40
+	+	42	23
+	+	4	0
+	+	3	0
+	+	4	0
+	+	28	0
+	+	4	0
+	+	1	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	28	0
+	+	45	0
+	+	42	0
+	+	43	0
+	+	46	0
+
+> ~/.lolicon/vim/plugin/One.vim
+	*	1629788946	0
+	"	13	0
+	^	13	0
+	.	14	0
+	+	1	0
+	+	2	0
+	+	14	0
+
+> ~/.lolicon/vim/general/autosave.vim
+	*	1629788873	0
+	"	5	12
+	^	5	13
+	.	6	0
+	+	1	0
+	+	6	0
+
+> ~/.lolicon/vim/syntax/lolicon_syntax.vim
+	*	1629787737	0
+	"	10	0
+	^	9	39
+	.	9	38
+	+	1	0
+	+	6	37
+	+	7	0
+	+	8	48
+	+	9	0
+	+	10	0
+	+	11	0
+	+	9	38
+
+> ~/.vim/ftplugin/cpp.vim
+	*	1629786494	0
+	"	2	0
+	^	1	0
+	.	2	0
+	+	1	0
+	+	2	0
+
+> ~/.vim/ftplugin/c.vim
+	*	1629786388	0
+	"	4	0
+	^	4	29
+	.	4	0
+	+	1	0
+	+	2	0
+	+	2	8
+	+	3	8
+	+	3	0
+	+	2	20
+	+	3	32
+	+	2	37
+	+	3	33
+	+	4	0
+
+> ~/abjvimrc
+	*	1629785978	0
+	"	5	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/defaults.vim
+	*	1629785464	0
+	"	136	0
+
+> ~/.lolicon/vim/plugin/init.vim
+	*	1629785193	0
+	"	8	0
+	^	8	0
+	.	7	0
+	+	1	0
+	+	8	17
+	+	8	0
+	+	8	17
+	+	7	15
+	+	8	17
+	+	8	0
+	+	9	0
+	+	1	0
+	+	7	0
+	+	1	0
+	+	7	0
+
+> ~/.vim/plugged/vim-colors-lucid/colors/lucid.vim
+	*	1629784785	0
+	"	14	0
+
+> ~/.lolicon/vim/general/cursor.vim
+	*	1629784257	0
+	"	7	0
+	^	7	0
+	.	8	0
+	+	1	0
+	+	2	0
+	+	8	0
+
+> ~/.lolicon/vim/key/mapping.vim
+	*	1629784247	0
+	"	14	0
+	.	3	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	12	0
+	+	13	1
+	+	14	1
+	+	17	0
+	+	17	16
+	+	28	0
+	+	29	0
+	+	30	0
+	+	31	0
+	+	38	0
+	+	50	0
+	+	51	0
+	+	64	1
+	+	63	1
+	+	23	0
+	+	25	0
+	+	24	15
+	+	25	0
+	+	24	0
+	+	64	0
+	+	24	0
+	+	25	0
+	+	64	24
+	+	64	0
+	+	25	13
+	+	24	0
+	+	25	0
+	+	24	12
+	+	25	12
+	+	64	0
+	+	59	11
+	+	60	12
+	+	65	0
+	+	59	12
+	+	60	12
+	+	1	0
+	+	64	0
+	+	60	12
+	+	61	0
+	+	60	21
+	+	59	20
+	+	60	25
+	+	59	22
+	+	60	18
+	+	59	13
+	+	63	0
+	+	62	0
+	+	24	12
+	+	25	12
+	+	17	1
+	+	17	27
+	+	17	16
+	+	21	0
+	+	17	16
+	+	20	0
+	+	20	16
+	+	20	0
+	+	18	0
+	+	43	0
+	+	42	0
+	+	43	0
+	+	42	0
+	+	24	12
+	+	25	12
+	+	48	0
+	+	49	0
+	+	48	0
+	+	46	0
+	+	47	0
+	+	46	15
+	+	47	15
+	+	49	0
+	+	65	0
+	+	73	13
+	+	66	29
+	+	68	31
+	+	69	20
+	+	70	55
+	+	71	0
+	+	32	0
+	+	33	0
+	+	34	0
+	+	35	0
+	+	34	0
+	+	33	0
+	+	32	15
+	+	33	17
+	+	34	17
+	+	35	18
+	+	2	15
+	+	3	12
+	+	5	0
+	+	3	10
+	+	3	0
+	+	4	7
+	+	3	0
+
+> ~/.lolicon/vim/plugin/IndentLine.vim
+	*	1629784201	0
+	"	5	0
+	^	2	1
+	.	2	1
+	+	1	0
+	+	6	0
+	+	1	0
+	+	2	0
+	+	1	1
+	+	2	1
+
+> ~/.vim/plugin/getscriptPlugin.vim
+	*	1629782480	0
+	"	11	0
+	^	11	0
+	.	37	0
+	+	29	0
+	+	37	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/pi_netrw.txt
+	*	1629782222	0
+	"	1137	4
+
+> .lolicon/vim/general/settings.vim
+	*	1629781417	0
+	"	23	0
+	^	40	0
+	.	2	0
+	+	1	29
+	+	1	16
+	+	41	0
+	+	36	0
+	+	38	0
+	+	36	0
+	+	35	0
+	+	31	0
+	+	30	0
+	+	29	0
+	+	2	0
+
+> ~/CPP/Cpp_Log/add_two_sales_item_objects/Sales_item.h
+	*	1629770930	0
+	"	108	0
+
+> ~/CPP/Cpp_Log/add_two_sales_item_objects/main.cpp
+	*	1629770714	0
+	"	1	0
+
+> ~/CPP/Cpp_Log/pointers_and_constexpr/main.cpp
+	*	1629770696	0
+	"	1	0
+
+> ~/Termux/myScripts/setup-cmp-shct.sh
+	*	1629752497	0
+	"	1	0
+	^	28	20
+	.	28	19
+	+	13	11
+	+	14	16
+	+	16	89
+	+	18	0
+	+	7	60
+	+	28	19
+
+> ~/CPP/Cpp_Log/adding_all_input/main.cpp
+	*	1629716689	0
+	"	1	0
+
+> /data/data/com.termux/files/usr/etc/bash_completion.d/git-prompt.sh
+	*	1629716674	0
+	"	242	0
+
+> /data/data/com.termux/files/usr/etc/bash_completion.d/git-completion.bash
+	*	1629716644	0
+	"	300	0
+
+> /data/data/com.termux/files/usr/etc/fonts/fonts.conf
+	*	1629716549	0
+	"	84	0
+
+> /data/data/com.termux/files/usr/etc/profile
+	*	1629716486	0
+	"	5	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/gui.txt
+	*	1629705080	0
+	"	435	56
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/various.txt
+	*	1629705023	0
+	"	345	0
+
+> ~/abj
+	*	1629704562	0
+	"	5	0
+	^	5	1
+	.	2	0
+	+	4	0
+	+	2	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/doc/options.txt
+	*	1629703324	0
+	"	4981	1
+
+> /data/data/com.termux/files/usr/share/vim/vim82/ftplugin/cpp.vim
+	*	1629703086	0
+	"	18	0
+	.	19	0
+	+	19	0
+
+> /data/data/com.termux/files/usr/share/vim/vim82/ftplugin/c.vim
+	*	1629702790	0
+	"	69	0
+	.	70	0
+	+	69	0
+	+	69	24
+	+	69	0
+	+	6	13
+	+	6	0
+	+	5	0
+	+	7	0
+	+	69	0
+	+	70	13
+	+	70	0
 
 > /data/data/com.termux/files/usr/share/vim/vim82/doc/todo.txt
 	*	1629701560	0
 	"	4876	0
 
-> ~/abj.c
-	*	1629701466	0
-	"	1	0
-	^	1	15
-	.	1	14
-	+	1	20
-	+	1	0
-	+	1	2
-	+	1	1
-	+	2	0
-	+	1	14
-
 > ~/.test.cpp.swp
 	*	1629701356	0
 	"	1	82
-
-> ~/.vimrc
-	*	1629700855	0
-	"	76	0
-	^	59	29
-	.	60	32
-	+	34	41
-	+	38	16
-	+	37	0
-	+	38	16
-	+	39	0
-	+	38	15
-	+	41	0
-	+	41	8
-	+	41	20
-	+	41	21
-	+	41	15
-	+	41	10
-	+	41	15
-	+	41	20
-	+	41	21
-	+	33	8
-	+	32	1
-	+	34	19
-	+	34	15
-	+	34	19
-	+	34	0
-	+	33	1
-	+	4	0
-	+	33	19
-	+	32	0
-	+	33	0
-	+	33	48
-	+	30	12
-	+	31	13
-	+	30	22
-	+	31	23
-	+	42	4
-	+	42	0
-	+	42	5
-	+	42	58
-	+	42	0
-	+	103	0
-	+	101	0
-	+	100	1
-	+	102	1
-	+	103	0
-	+	42	0
-	+	133	33
-	+	101	0
-	+	102	0
-	+	103	0
-	+	124	16
-	+	42	0
-	+	101	0
-	+	41	26
-	+	41	16
-	+	43	19
-	+	42	21
-	+	44	25
-	+	45	0
-	+	42	0
-	+	43	13
-	+	44	13
-	+	75	1
-	+	43	14
-	+	44	14
-	+	43	14
-	+	76	25
-	+	77	0
-	+	43	12
-	+	44	12
-	+	78	0
-	+	38	12
-	+	37	12
-	+	36	12
-	+	37	12
-	+	40	0
-	+	72	20
-	+	73	0
-	+	37	0
-	+	23	12
-	+	58	25
-	+	58	24
-	+	52	22
-	+	58	25
-	+	63	0
-	+	59	0
-	+	59	27
-	+	66	0
-	+	59	18
-	+	59	29
-	+	59	18
-	+	59	0
-	+	59	44
-	+	60	19
-	+	60	21
-	+	60	0
-	+	59	0
-	+	59	22
-	+	61	0
-	+	60	0
-	+	59	27
-	+	60	29
-	+	59	28
-	+	60	32
-
-> /data/data/com.termux/files/usr/share/vim/vim82/doc/options.txt
-	*	1629700854	0
-	"	8503	34
 
 > /data/data/com.termux/files/a.sh
 	*	1629682859	0
@@ -751,31 +1222,6 @@ $
 	+	22	0
 	+	23	21
 
-> /data/data/com.termux/files/usr/share/vim/vim82/ftplugin/c.vim
-	*	1629682703	0
-	"	70	0
-	^	71	0
-	.	70	31
-	+	69	0
-	+	69	24
-	+	69	0
-	+	6	13
-	+	6	0
-	+	5	0
-	+	7	0
-	+	69	0
-	+	71	13
-	+	70	31
-
-> /data/data/com.termux/files/usr/share/vim/vim82/ftplugin/cpp.vim
-	*	1629682575	0
-	"	20	31
-	^	20	32
-	.	19	31
-	+	19	0
-	+	20	0
-	+	19	31
-
 > /data/data/com.termux/files/usr/share/vim/vim82/doc/intro.txt
 	*	1629677527	0
 	"	444	22
@@ -791,25 +1237,6 @@ $
 > /data/data/com.termux/files/usr/share/vim/vim82/doc/help.txt
 	*	1629665028	0
 	"	1	0
-
-> ~/.vim/syntax/cpp.vim
-	*	1629663482	0
-	"	5	0
-	^	5	0
-	.	2	0
-	+	1	0
-	+	2	0
-
-> ~/.vim/syntax/c.vim
-	*	1629663453	0
-	"	1	0
-	^	12	1
-	.	9	1
-	+	9	32
-	+	2	68
-	+	6	0
-	+	12	32
-	+	9	1
 
 > /data/data/com.termux/files/usr/share/vim/vim82/syntax/c.vim
 	*	1629663246	0
@@ -875,10 +1302,6 @@ $
 	"	6	22
 	^	6	23
 
-> ~/CPP/Cpp_Log/pointers_and_constexpr/main.cpp
-	*	1629652482	0
-	"	1	0
-
 > /data/data/com.termux/files/usr/share/vim/vim82/doc/filetype.txt
 	*	1629612618	0
 	"	754	33
@@ -923,25 +1346,9 @@ $
 	+	172	98
 	+	173	23
 
-> ~/Termux/myScripts/setup-cmp-shct.sh
-	*	1629594874	0
-	"	28	19
-	^	28	20
-	.	28	19
-	+	13	11
-	+	14	16
-	+	16	89
-	+	18	0
-	+	7	60
-	+	28	19
-
 > /data/data/com.termux/files/usr/var/lib/dpkg/info/neovim.conffiles
 	*	1629592034	0
 	"	1	0
-
-> ~/CPP/Cpp_Log/adding_all_input/main.cpp
-	*	1629589338	0
-	"	5	24
 
 > ~/a
 	*	1629589279	0
