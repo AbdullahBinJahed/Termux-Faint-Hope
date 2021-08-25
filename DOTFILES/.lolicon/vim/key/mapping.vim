@@ -1,8 +1,10 @@
 "### Mapping Escape and Insert mode ###
 nnoremap <Space> i
 nnoremap <CR> i
-noremap jj <ESC>
-noremap! jj <ESC>
+noremap jk <ESC>
+noremap! jk <ESC>
+noremap kj <ESC>
+noremap! kj <ESC>
 vnoremap <CR> <ESC>
 vnoremap <BS> d
 inoremap <Esc> <Esc>l
@@ -87,12 +89,20 @@ vnoremap < <gv
 vnoremap > >gv
 
 "### Cmp-Shct shortcut ###
-noremap <leader>r :!c %<CR>
-noremap! <leader>r <ESC>:!c %<CR>
+noremap  :w<CR>:!c %<CR>
+noremap!  <ESC>:w<CR>:!c %<CR>
 
 "### Cursor moving ###
 noremap <C-Right> 7l
 noremap <C-Left> 7h
 inoremap <A-Right> <C-o>99l<Right>
 inoremap <A-Left> <C-o>99h
+
+"### Window moving ###
+noremap <C-Up> <C-y>
+noremap <C-Down> <C-e>
+vnoremap <C-Up> <C-y>
+vnoremap <C-Down> <C-e>
+inoremap <C-Up> <C-O><C-y>
+inoremap <C-Down> <C-O><C-e>
 
