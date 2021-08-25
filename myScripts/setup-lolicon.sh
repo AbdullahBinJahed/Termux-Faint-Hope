@@ -20,13 +20,13 @@ mv -f welcome.sh ~/.lolicon
 mv -f ghpus.sh ~/.lolicon/scripts
 cd ../DOTFILES/
 echo "${BGREEN}Copying DOTFILES...${NONE}"
-cp -rf .config ~/
-cp -rf .local ~/
-cp -rf .termux ~/
-cp -rf .vim ~/
-cp -rf .bashrc ~/
-cp -rf .vimrc ~/
-cp -rf .viminfo ~/
+mv -rf .config ~/
+mv -rf .local ~/
+mv -rf .termux ~/
+mv -rf .vim ~/
+mv -rf .bashrc ~/
+mv -rf .vimrc ~/
+mv -rf .viminfo ~/
 echo "${BGREEN}Removed Startup message...${NONE}"
 mv /data/data/com.termux/files/usr/etc/motd /data/data/com.termux/files/usr/etc/__not_needed_motd
 cd ../../
