@@ -35,4 +35,5 @@ rm -rf Termux
 echo "${BGREEN}Changing default shell from bash to fish...${NONE}"
 chsh -s fish
 echo "${BGREEN}Setup Completed${NONE}"
+termux-reload-settings
 exit
