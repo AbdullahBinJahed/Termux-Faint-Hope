@@ -1,7 +1,13 @@
+"set ttimeout
+"set ttimeoutlen=1
+"set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
+"set ttyfast
+
 " - entered insert mode
-let &t_SI = "\e[5 q\e]12;blue\x7"
+let &t_SI = "[5 q]12;Magenta\007"
 " - entered replace mode
-let &t_SR = "\e[0 q\e]12;Red\007"
+let &t_SR = "[0 q]12;Red\007"
 " - leaving insert/replace mode
-let &t_EI = "\e[2 q\e]112\007"
+let &t_EI = "[2 q]112\007"
+
 

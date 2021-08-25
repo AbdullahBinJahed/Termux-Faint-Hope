@@ -3,6 +3,9 @@ nnoremap <Space> i
 nnoremap <CR> i
 noremap jj <ESC>
 noremap! jj <ESC>
+vnoremap <CR> <ESC>
+vnoremap <BS> d
+inoremap <Esc> <Esc>l
 
 "### Saving and Exiting files ###
 inoremap `` <ESC>:wq<CR>
@@ -16,8 +19,8 @@ noremap! <C-q> <ESC>:q!<CR>
 
 "### Copy, Paste and Cut ###
 vnoremap <C-c> y
-noremap <c-p> Pi
-vnoremap <c-x> d
+noremap <C-p> Pi
+vnoremap <C-x> d
 
 "### Undo and Redo ###
 nnoremap <C-Z> u
@@ -40,10 +43,16 @@ vnoremap <S-LEFT> <LEFT>
 vnoremap <S-RIGHT> <RIGHT>
 
 "### Moving Lines Up Down ###
-noremap [1;3A <ESC>:m-2<CR>
-noremap! [1;3A <ESC>:m-2<CR>
-noremap [1;3B <ESC>:m+<CR>
-noremap! [1;3B <ESC>:m+<CR>
+nnoremap [1;3A :m-2<CR>
+nnoremap [1;3B :m+<CR>
+inoremap [1;3A <ESC>:m-2<CR>
+inoremap [1;3B <ESC>:m+<CR>
+vnoremap <A-UP> :m '<-2<CR>gv=gv
+vnoremap <A-DOWN> :m '>+1<CR>gv=gv
+"nnoremap <A-UP> :m .-2<CR>==
+"nnoremap <A-DOWN> :m .+1<CR>==
+"inoremap <A-DOWN> <Esc>:m .+1<CR>==gi
+"inoremap <A-UP> <Esc>:m .-2<CR>==gi
 
 "### Copying line Up Down ###
 inoremap [1;4B <ESC><S-V>ypi
@@ -62,7 +71,7 @@ noremap! [1;4C <ESC>:tabn<CR>
 
 "### Comments ###
 nnoremap  :s/^/#/<CR>i
-inoremap  <ESC>:s/^/#/<CR>i
+inoremap  <C-o>:s/^/#/<CR>
 vnoremap  <S-I>#<ESC><ESC>i
 
 "map <F9> a<C-R>=strftime("%c")<CR><Esc>
@@ -78,5 +87,12 @@ vnoremap < <gv
 vnoremap > >gv
 
 "### Cmp-Shct shortcut ###
-noremap <C-a> :!c<CR>
-noremap! <C-a> <ESC>:!c<CR>
+noremap <leader>r :!c %<CR>
+noremap! <leader>r <ESC>:!c %<CR>
+
+"### Cursor moving ###
+noremap <C-Right> 7l
+noremap <C-Left> 7h
+inoremap <A-Right> <C-o>99l<Right>
+inoremap <A-Left> <C-o>99h
+
