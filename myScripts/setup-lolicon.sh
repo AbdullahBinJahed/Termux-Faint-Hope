@@ -19,18 +19,17 @@ cd Termux/myScripts/
 chmod +x setup-cmp-shct.sh
 source setup-cmp-shct.sh
 echo -e "${BGREEN}Installing gtk3 and vim-gtk...${NONE}"
-pkg install gtk3 vim-gtk
-mv -f welcome.sh ~/.lolicon
-mv -f ghpus.sh ~/.lolicon/scripts
+pkg install gtk3 vim-gtk -y
+echo -e "${BGREEN}Copying scripts...${NONE}"
+cp -f welcome.sh ~/.lolicon
+cp -f ghpush.sh ~/.lolicon/scripts
 cd ../DOTFILES/
 echo -e "${BGREEN}Copying DOTFILES...${NONE}"
 cp -rf .config ~/
-cp -rf .local ~/
 cp -rf .termux ~/
 cp -rf .vim ~/
 cp -rf .bashrc ~/
 cp -rf .vimrc ~/
-cp -rf .viminfo ~/
 cp -rf .lolicon ~/
 echo -e "${BGREEN}Installing vim plugin...${NONE}"
 vim +'PlugInstall --sync' +qa
