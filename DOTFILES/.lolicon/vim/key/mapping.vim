@@ -25,8 +25,8 @@ vnoremap <C-X> d
 "### Undo and Redo ###
 nnoremap <C-Z> u
 inoremap <C-Z> <C-O>u
-nnoremap <C-x> <C-R>
-inoremap <C-x> <C-O><C-R>
+nnoremap <C-a> <C-R>
+inoremap <C-a> <C-O><C-R>
 
 "### Selecting Line ###
 inoremap <S-UP> <ESC><S-V>
