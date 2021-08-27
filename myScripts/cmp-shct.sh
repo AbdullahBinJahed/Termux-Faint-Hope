@@ -215,10 +215,10 @@ PathCheck()
   file_count=$(find $directory_path -name $file_name | wc -l)
   if [[ $file_count -gt 0 ]]; then
     currDir=$(basename $(pwd))
-    mv -f "$program" ~/Cpp/"$currDir"
-    chmod +x ~/Cpp/"$currDir"/"$program"
+    mv -f "$program" ~/CPP/"$currDir"
+    chmod +x ~/CPP/"$currDir"/"$program"
     echo -e ""$BGREEN"Starting program from internal storage..."$NONE""
-    ~/Cpp/"$currDir"/"$program"
+    ~/CPP/"$currDir"/"$program"
   else
     echo -e ""$BGREEN"Starting program..."$NONE""
     ./"$program"

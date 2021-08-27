@@ -29,7 +29,7 @@ mv cmp-shct.sh "$HOME/.lolicon/"
 echo -e "${BGREEN}Creating symlinks and directory to use with Spck${NONE}"
 mkdir /storage/emulated/0/Android/data/io.spck/files/C++
 ln -s /storage/emulated/0/Android/data/io.spck/files/C++ ~/C++
-mkdir ~/Cpp
+mkdir ~/CPP
 echo -e "${BGREEN}Setup complete. Now run 'c --help' to see info${NONE}"
 rm setup-cmp-shct.sh
 source $HOME/.bashrc
