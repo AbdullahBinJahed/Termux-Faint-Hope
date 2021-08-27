@@ -57,6 +57,7 @@ main()
           FileCheck
           $action
         else
+          echo
           echo -e "${RED}Too many files!!! use the -a switch${NONE}"
           kill -INT $$
         fi
@@ -165,8 +166,8 @@ ArgCheck()
           echo
           echo -e "${BGREEN}Updating...${NONE}"
           sleep 1.5s
-          wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh 1>&2 2>/dev/null
-          mv -f compiler_shortcuts.sh $HOME/.lolicon/compiler_shortcuts.sh
+          curl -LO# https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/cmp-shct.sh
+          mv -f cmp-shct.sh $HOME/.lolicon/cmp-shct.sh
           echo
           echo -e "${BGREEN}Update complete${NONE}"
           kill -INT $$
@@ -183,6 +184,7 @@ ArgCheck()
           ;;
         * )
           echo -e "${RED}Invalid Argument${NONE}"
+          echo
           Help
           kill -INT $$
           ;;
