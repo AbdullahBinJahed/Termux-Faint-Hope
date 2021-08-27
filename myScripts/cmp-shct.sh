@@ -64,7 +64,7 @@ main()
       fi
       if [ "$run" == "true" ]; then
         echo -e "${BGREEN}Starting program...${NONE}"
-        ./"$program";
+        ./"$program" 2>dev/null
       fi
     fi
   else
