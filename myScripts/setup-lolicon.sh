@@ -32,7 +32,7 @@ cp -rf .bashrc ~/
 cp -rf .vimrc ~/
 cp -rf .lolicon ~/
 echo -e "${BGREEN}Installing vim plugin...${NONE}"
-vim +'PlugInstall --sync' +qa
+vim -c'PlugInstall --sync' +qa
 echo -e "${BGREEN}Removed Startup message...${NONE}"
 rm /data/data/com.termux/files/usr/etc/motd
 cd ../../
