@@ -102,8 +102,8 @@ nnoremap <A-Left> 99hi
 "### Window moving ###
 noremap <C-Up> <C-y>
 noremap <C-Down> <C-e>
-vnoremap <C-Up> <C-y>
-vnoremap <C-Down> <C-e>
 inoremap <C-Up> <C-O><C-y>
 inoremap <C-Down> <C-O><C-e>
+
+
 

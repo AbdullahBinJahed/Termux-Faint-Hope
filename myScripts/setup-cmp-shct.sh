@@ -13,7 +13,7 @@ pkg install gcc-11 -y
 setupgcc-11
 setup-patchforgcc
 echo -e "${BGREEN}Downloading cmp-shct${NONE}"
-wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/cmp-shct.sh
+curl -LO# https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/cmp-shct.sh
 sleep 1s
 echo -e "${BGREEN}Script download complete${NONE}"
 if [ ! -e "$HOME/.lolicon" ]; then mkdir "$HOME/.lolicon"; fi

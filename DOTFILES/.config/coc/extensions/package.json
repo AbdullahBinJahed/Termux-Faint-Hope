@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "coc-clang-format-style-options": ">=0.0.5",
+    "coc-clangd": ">=0.14.0",
+    "coc-dot-complete": ">=0.0.2",
+    "coc-emmet": ">=1.1.6"
+  }
+}

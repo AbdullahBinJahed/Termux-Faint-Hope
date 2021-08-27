@@ -13,9 +13,9 @@ pkg install clang vim nodejs python cmatrix curl wget fish gh git ncurses cmake 
 echo -e "${BGREEN}Package Installation Completed${NONE}"
 mkdir ~/.lolicon
 mkdir ~/.lolicon/scripts
-echo -e "${BGREEN}Cloning AbdullahBinJahed/Termux...${NONE}"
-git clone https://github.com/AbdullahBinJahed/Termux.git
-cd Termux/myScripts/
+echo -e "${BGREEN}Cloning AbdullahBinJahed/Termux-Faint-Hope...${NONE}"
+git clone https://github.com/AbdullahBinJahed/Termux-Faint-Hope.git
+cd Termux-Faint-Hope/myScripts/
 chmod +x setup-cmp-shct.sh
 source setup-cmp-shct.sh
 echo -e "${BGREEN}Installing gtk3 and vim-gtk...${NONE}"
@@ -36,8 +36,8 @@ vim +'PlugInstall --sync' +qa
 echo -e "${BGREEN}Removed Startup message...${NONE}"
 rm /data/data/com.termux/files/usr/etc/motd
 cd ../../
-echo -e "${BGREEN}Deleting AbdullahBinJahed/Termux...${NONE}"
-rm -rf Termux
+echo -e "${BGREEN}Deleting AbdullahBinJahed/Termux-Faint-Hope...${NONE}"
+rm -rf Termux-Faint-Hope
 echo -e "${BGREEN}Changing default shell from bash to fish...${NONE}"
 chsh -s fish
 echo -e "${BGREEN}Setup Completed${NONE}"

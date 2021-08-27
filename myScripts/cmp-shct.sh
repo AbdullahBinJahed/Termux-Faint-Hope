@@ -169,7 +169,7 @@ ArgCheck()
           echo
           echo -e "${BGREEN}Updating...${NONE}"
           sleep 1.5s
-          wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/cmp-shct.sh 1>&2 2>/dev/null
+          curl -LO# https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/cmp-shct.sh
           mv -f cmp-shct.sh $HOME/.lolicon/cmp-shct.sh
           echo
           echo -e "${BGREEN}Update complete${NONE}"
