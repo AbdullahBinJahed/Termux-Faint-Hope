@@ -57,15 +57,11 @@ main()
           FileCheck
           $action
         else
-          echo
           echo -e "${RED}Too many files!!! use the -a switch${NONE}"
           kill -INT $$
         fi
       fi
-      if [ "$run" == "true" ]; then
-        echo -e "${BGREEN}Starting program...${NONE}"
-        ./"$program" 2>dev/null
-      fi
+      if [ "$run" == "true" ]; then PathCheck; fi
     fi
   else
     echo "No C or C++ program found"
@@ -169,8 +165,8 @@ ArgCheck()
           echo
           echo -e "${BGREEN}Updating...${NONE}"
           sleep 1.5s
-          curl -LO# https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/cmp-shct.sh
-          mv -f cmp-shct.sh $HOME/.lolicon/cmp-shct.sh
+          wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh 1>&2 2>/dev/null
+          mv -f compiler_shortcuts.sh $HOME/.lolicon/compiler_shortcuts.sh
           echo
           echo -e "${BGREEN}Update complete${NONE}"
           kill -INT $$
@@ -187,7 +183,6 @@ ArgCheck()
           ;;
         * )
           echo -e "${RED}Invalid Argument${NONE}"
-          echo
           Help
           kill -INT $$
           ;;
@@ -208,6 +203,23 @@ FileCheck()
     program=$(basename "$program_name" .cpp)
     if [ $compiler == gcc ]; then compiler=g++; fi
     if [ $compiler == clang ]; then compiler=clang++; fi
+  fi
+}
+
+PathCheck()
+{
+  directory_path=~/C++/
+  file_name=$program
+  file_count=$(find $directory_path -name $file_name | wc -l)
+  if [[ $file_count -gt 0 ]]; then
+    currDir=$(basename $(pwd))
+    mv -f "$program" ~/Cpp/"$currDir"
+    chmod +x ~/Cpp/"$currDir"/"$program"
+    echo -e ""$BGREEN"Starting program from internal storage..."$NONE""
+    ~/Cpp/"$currDir"/"$program"
+  else
+    echo -e ""$BGREEN"Starting program..."$NONE""
+    ./"$program"
   fi
 }
 
