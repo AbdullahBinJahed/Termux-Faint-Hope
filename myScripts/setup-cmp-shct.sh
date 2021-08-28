@@ -19,7 +19,7 @@ echo -e "${BGREEN}Script download complete${NONE}"
 if [ ! -e "$HOME/.lolicon" ]; then mkdir "$HOME/.lolicon"; fi
 if [ ! -e $HOME/.lolicon/cmp-shct.sh ]; then
   als="alias c='bash /data/data/com.termux/files/home/.lolicon/cmp-shct.sh'"
-  echo "$als" >> "$HOME/.bashrc"
+  echo "$als" >> $HOME/.bashrc
 fi
 echo -e "${BGREEN}Updating cmp-shct if already exists...${NONE}"
 if [ -e "$HOME/.lolicon/cmp-shct.sh" ]; then
