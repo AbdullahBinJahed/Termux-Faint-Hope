@@ -27,6 +27,7 @@ compile_mode="single_file"
 compiler=gcc
 action="Compile"
 run="false"
+debug="false"
 
 NONE='\033[00m'
 BGREEN='\033[01;32m'
@@ -72,8 +73,16 @@ main()
 
 Compile()
 {
-  echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
-  time $compiler "$program_name" -o "$program"
+  if [ "$debug" = "true" ]; then
+    compiler=gcc
+    FileCheck
+    echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN} with GCC debug flag...${NONE}"
+    time $compiler "$program_name" -g -o "$program"
+    PathCheck
+  else
+    echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
+    time $compiler "$program_name" -o "$program" 
+  fi
 }
 
 Preprocessor()
@@ -145,6 +154,9 @@ ArgCheck()
         -c )
           compiler=clang
           ;;
+        -dbg )
+          debug="true"
+          ;;
         -p )
           action="Preprocessor"
           ;;
@@ -210,18 +222,28 @@ FileCheck()
 
 PathCheck()
 {
-  directory_path=~/C++/
+  directory_path=~/C++/*
   file_name=$program
   file_count=$(find $directory_path -name $file_name | wc -l)
   if [[ $file_count -gt 0 ]]; then
     currDir=$(basename $(pwd))
     mv -f "$program" ~/CPP/"$currDir"
     chmod +x ~/CPP/"$currDir"/"$program"
-    echo -e ""$BGREEN"Starting program from internal storage..."$NONE""
-    ~/CPP/"$currDir"/"$program"
+    if [ "$debug" = "true" ]; then
+      echo -e ""$BGREEN"Starting program in debug mode from internal storage..."$NONE""
+      gdb ~/CPP/"$currDir"/"$program"
+    else
+      echo -e ""$BGREEN"Starting program from internal storage..."$NONE""
+      ~/CPP/"$currDir"/"$program" 
+    fi
   else
-    echo -e ""$BGREEN"Starting program..."$NONE""
-    ./"$program"
+    if [ "$debug" = "true" ]; then
+      echo -e ""$BGREEN"Starting program in debug mode..."$NONE""
+      gdb "$program"
+    else
+      echo -e ""$BGREEN"Starting program..."$NONE""
+      ./"$program"
+    fi
   fi
 }
 
