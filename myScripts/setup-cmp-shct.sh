@@ -12,6 +12,8 @@ echo -e "${BGREEN}Installing gcc-11...${NONE}"
 pkg install gcc-11 -y
 setupgcc-11
 setup-patchforgcc
+echo -e "${BGREEN}Installing GNU Debugger...${NONE}"
+pkg install gdb cgdb gdbm-static -y
 echo -e "${BGREEN}Downloading cmp-shct${NONE}"
 curl -LO# https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/cmp-shct.sh
 sleep 1s
