@@ -6,7 +6,7 @@ noremap! jk <ESC>
 noremap kj <ESC>
 noremap! kj <ESC>
 vnoremap <CR> <ESC>
-vnoremap <BS> d
+vnoremap <BS> "_d
 inoremap <Esc> <Esc>l
 
 "### Saving and Exiting files ###
