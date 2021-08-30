@@ -28,8 +28,8 @@ set number                              " Line numbers
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 "set noshowmode                          " We don't need to see things like -- INSERT -- anymore
-"set nobackup                           " This is recommended by coc
-"set nowritebackup                      " This is recommended by coc
+set nobackup                            " This is recommended by coc
+set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
@@ -38,6 +38,7 @@ set formatoptions-="                    " Stop newline continution of comments
 "set autochdir                          " Your working directory will always be the same as your working directory
 set nojoinspaces                        " Use one space, not two, after punctuation.
 set diffopt+=vertical                   " Always use vertical diffs  
+set shortmess+=c                        " This is recommmend by coc
 let g:is_posix = 1                      " When the type of shell script is /bin/sh, assume a POSIX-compatible shell for syntax highlighting purposes
 
 

@@ -141,7 +141,7 @@ function! ToggleComment()
 endfunction
 
 nnoremap  :call ToggleComment()<CR>
-inoremap  :call ToggleComment()<CR>
+inoremap  <C-O>:call ToggleComment()<CR>
 vnoremap  :call ToggleComment()<CR>
 
 
