@@ -1,5 +1,5 @@
 "### Mapping Escape and Insert mode ###
-nnoremap <Space> i
+nnoremap <Space> i<Right>
 nnoremap <CR> i
 noremap jk <ESC>
 noremap! jk <ESC>
@@ -8,6 +8,18 @@ noremap! kj <ESC>
 vnoremap <CR> <ESC>
 vnoremap <BS> "_d
 inoremap <Esc> <Esc>l
+
+"### Clipboard ###
+au TextYankPost * call system('termux-clipboard-set &', @")
+function Paste(p)
+    let sysclip=system('termux-clipboard-get')
+    if sysclip != @"
+        let @"=sysclip
+    endif
+    return a:p
+endfunction
+noremap <expr> p Paste('p')
+noremap <expr> P Paste('P')
 
 "### Saving and Exiting files ###
 inoremap 99 <ESC>:wq<CR>
