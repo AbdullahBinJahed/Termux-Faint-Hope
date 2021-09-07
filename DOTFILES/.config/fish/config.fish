@@ -31,4 +31,9 @@ alias ....='../../../'
 
 export HISTCONTROL=ignoreboth
 
+# Terminal cursor styling #
 echo -e '\e[6 q'
+#echo -e '\e[2 q' # Change to block
+#echo -e '\e[4 q' # Change to underline
+#echo -e '\e[6 q' # Change to bar
+#echo -ne "\033]12;#ff0000\007"
