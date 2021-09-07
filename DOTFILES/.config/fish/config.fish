@@ -30,3 +30,5 @@ alias ...='../../'
 alias ....='../../../'
 
 export HISTCONTROL=ignoreboth
+
+echo -e '\e[6 q'
