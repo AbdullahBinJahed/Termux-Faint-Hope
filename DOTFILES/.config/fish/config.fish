@@ -2,6 +2,8 @@ if status is-interactive
 # Commands to run in interactive sessions can go here
 end
 
+echo -e '\e[6 q\c'
+
 # set -g theme_display_user yes
 # set -g theme_hide_hostname yes
 # set -g theme_hide_hostname no
@@ -32,8 +34,13 @@ alias ....='../../../'
 export HISTCONTROL=ignoreboth
 
 # Terminal cursor styling #
-echo -e '\e[6 q'
+#echo -e '\e[6 q\c'
 #echo -e '\e[2 q' # Change to block
 #echo -e '\e[4 q' # Change to underline
 #echo -e '\e[6 q' # Change to bar
-#echo -ne "\033]12;#ff0000\007"
+#echo -ne "\033]12;#00ffff\007\c"
+
+
+function adachi --on-event fish_postexec
+   echo -e '\e[6 q\c'
+end
