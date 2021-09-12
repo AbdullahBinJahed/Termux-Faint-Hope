@@ -9,7 +9,8 @@ pkg upgrade -y
 apt update -y
 apt upgrade -y
 echo -e "${BGREEN}Installing packages...${NONE}"
-pkg install clang vim python cmatrix curl wget fish gh git man neovim tree x11-repo zsh -y
+pkg install wget curl vim git gh man x11-repo tree -y
+pkg install clang python cmatrix fish neovim zsh -y
 echo -e "${BGREEN}Package Installation Completed${NONE}"
 mkdir ~/.lolicon
 mkdir ~/.lolicon/scripts
