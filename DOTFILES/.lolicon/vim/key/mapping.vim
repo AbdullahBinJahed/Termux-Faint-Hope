@@ -1,5 +1,5 @@
 "### Mapping Escape and Insert mode ###
-nnoremap <Space> i<Right>
+" nnoremap <Space> i<Right>
 nnoremap <CR> i
 noremap jk <ESC>
 noremap! jk <ESC>
