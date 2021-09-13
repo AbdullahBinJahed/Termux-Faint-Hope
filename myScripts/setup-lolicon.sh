@@ -1,6 +1,7 @@
 #!/bin/bash
 NONE='\033[00m'
 BGREEN='\033[01;32m'
+RED='\033[01;31m'
 
 clear
 echo -e "${BGREEN}Setup started...${NONE}"
@@ -14,7 +15,7 @@ sleep 1
 echo -e "${BGREEN}Installing crucial packages...${NONE}"
 pkg install wget curl cmatrix vim git gh man neofetch tmux tree fish zsh -y
 
-echo -e "Do you want to download additional packages ? \c"
+echo -e "Do you want to download additional packages? [y/n] \c"
 read consent
 if [ $consent = "y" ] || [ $consent = "Y" ];then
   echo -e "${BGREEN}Installing additional packages...${NONE}"
@@ -22,7 +23,7 @@ if [ $consent = "y" ] || [ $consent = "Y" ];then
 fi
 consent=""
 
-echo -e "Do you want to download C/C++ packages ? \c"
+echo -e "Do you want to download C/C++ packages? [y/n] \c"
 read consent
 if [ $consent = "y" ] || [ $consent = "Y" ];then
   echo -e "${BGREEN}Installing C/C++ packages...${NONE}"
@@ -31,11 +32,10 @@ if [ $consent = "y" ] || [ $consent = "Y" ];then
   curl -LO# https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/setup-cmp-shct.sh
   chmod +x setup-cmp-shct.sh
   bash setup-cmp-shct.sh
-  rm setup-cmp-shct.sh
 fi
 consent=""
 
-echo -e "Do you want to download Node.js and React packages ? \c"
+echo -e "Do you want to download Node.js and React packages? [y/n] \c"
 read consent
 if [ $consent = "y" ] || [ $consent = "Y" ];then
   echo -e "${BGREEN}Installing Node.js...${NONE}"
@@ -45,17 +45,19 @@ if [ $consent = "y" ] || [ $consent = "Y" ];then
   npm install -g tar
   npm install -g create-react-app
   consent=""
-  echo -e "Do you want to create a test React app now ? \c"
+  echo -e "Do you want to create a test React app now? [y/n] \c"
   read consent
   if [ $consent = "y" ] || [ $consent = "Y" ];then
-    echo "This may take a long time so please wait until it's finished"
+    echo
+    echo
+    echo ""$RED"This may take a long time so please wait until it's finished"$NONE""
     sleep 4
     npx create-react-app my-react-app
   fi
 fi
 consent=""
 
-echo -e "Do you want to download Python packages ? \c"
+echo -e "Do you want to download Python packages? [y/n] \c"
 read consent
 if [ $consent = "y" ] || [ $consent = "Y" ];then
   echo -e "${BGREEN}Installing Python packages...${NONE}"
@@ -67,7 +69,7 @@ if [ $consent = "y" ] || [ $consent = "Y" ];then
   pip3 install pudb
   pip3 install speedtest-cli
   consent=""
-  echo -e "Do you want to install pygame ? \c"
+  echo -e "Do you want to install pygame? [y/n] \c"
   read consent
   if [ $consent = "y" ] || [ $consent = "Y" ];then
     echo -e "${BGREEN}Installing pygame packages...${NONE}"
@@ -82,7 +84,7 @@ if [ $consent = "y" ] || [ $consent = "Y" ];then
 fi
 consent=""
 
-echo -e "Do you want to download Graphical/X11 packages ? \c"
+echo -e "Do you want to download Graphical/X11 packages? [y/n] \c"
 read consent
 if [ $consent = "y" ] || [ $consent = "Y" ];then
   echo -e "${BGREEN}Installing X11 packages...${NONE}"
@@ -95,8 +97,8 @@ fi
 consent=""
 echo -e "${BGREEN}Package Installation Completed${NONE}"
 
-mkdir ~/.lolicon
-mkdir ~/.lolicon/scripts
+mkdir ~/.lolicon 2>/dev/null
+mkdir ~/.lolicon/scripts 2>/dev/null
 echo -e "${BGREEN}Cloning AbdullahBinJahed/Termux-Faint-Hope...${NONE}"
 git clone https://github.com/AbdullahBinJahed/Termux-Faint-Hope.git
 cd Termux-Faint-Hope/myScripts/
