@@ -27,6 +27,7 @@ compile_mode="single_file"
 compiler=gcc
 action="Compile"
 run="false"
+debug=false
 
 NONE='\033[00m'
 BGREEN='\033[01;32m'
@@ -57,14 +58,12 @@ main()
           FileCheck
           $action
         else
+          echo
           echo -e "${RED}Too many files!!! use the -a switch${NONE}"
           kill -INT $$
         fi
       fi
-      if [ "$run" == "true" ]; then
-        echo -e "${BGREEN}Starting program...${NONE}"
-        ./"$program";
-      fi
+      if [ "$run" == "true" ]; then PathCheck; fi
     fi
   else
     echo "No C or C++ program found"
@@ -74,8 +73,13 @@ main()
 
 Compile()
 {
-  echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
-  time $compiler "$program_name" -o "$program"
+  if [ $debug = true ]; then
+    echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN} with debug flag...${NONE}"
+    time $compiler "$program_name" -o "$program" -g
+  else
+    echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
+    time $compiler "$program_name" -o "$program"
+  fi
 }
 
 Preprocessor()
@@ -147,6 +151,9 @@ ArgCheck()
         -c )
           compiler=clang
           ;;
+        -db )
+          debug=true
+          ;;
         -p )
           action="Preprocessor"
           ;;
@@ -168,8 +175,8 @@ ArgCheck()
           echo
           echo -e "${BGREEN}Updating...${NONE}"
           sleep 1.5s
-          wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux/main/myScripts/compiler_shortcuts.sh 1>&2 2>/dev/null
-          mv -f compiler_shortcuts.sh $HOME/.lolicon/compiler_shortcuts.sh
+          curl -LO# https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/cmp-shct.sh
+          mv -f cmp-shct.sh $HOME/.lolicon/cmp-shct.sh
           echo
           echo -e "${BGREEN}Update complete${NONE}"
           kill -INT $$
@@ -186,6 +193,7 @@ ArgCheck()
           ;;
         * )
           echo -e "${RED}Invalid Argument${NONE}"
+          echo
           Help
           kill -INT $$
           ;;
@@ -209,6 +217,23 @@ FileCheck()
   fi
 }
 
+PathCheck()
+{
+  SPCK_PATH=/storage/emulated/0/Android/data/io.spck/files/*
+  EXEC_PATH=$(readlink -f ./"$program_name")
+  PROJ_NAME=$(basename "$(dirname "$EXEC_PATH")")
+  if [[ $EXEC_PATH = $SPCK_PATH ]]; then
+    if [ ! -e ~/CPP/Cpp_Log/"$PROJ_NAME" ]; then mkdir -p ~/CPP/Cpp_Log/"$PROJ_NAME"; fi
+    mv -f ./"$program" ~/CPP/Cpp_Log/"$PROJ_NAME"
+    chmod +x ~/CPP/Cpp_Log/"$PROJ_NAME"/"$program"
+    echo -e ""$BGREEN"Running program from SPCK..."$NONE""
+    ~/CPP/Cpp_Log/"$PROJ_NAME"/"$program"
+  else 
+    echo -e ""$BGREEN"Running program..."$NONE""
+    ./"$program"
+  fi
+}
+
 Help()
 {
   echo "Usage: c [ARGS] [FILENAME]"
@@ -220,6 +245,7 @@ Help()
   printf "  -bin                    creates the binary instructions and saves them in a file\n"
   printf "  -c                      use the Clang Compiler\n"
   printf "  -cmp                    runs the Compiler to create assembly code *.s\n"
+  printf "  -db                     compiles with the debug flag\n"
   printf "  --help                  prints this message\n"
   printf '%-4s%-22s%s\n%-26s%s\n' "  -l" "" "links the object file with linker and saves what" "" "arguments were passed to linker into a *.txt file"
   printf "  -p                      only Preprocess programs and saves them in *.i file\n"
@@ -228,5 +254,5 @@ Help()
   echo
   echo "No arguments will compile and run single .c or .cpp program in current directory"
 }
-  
+
 main "$@";
