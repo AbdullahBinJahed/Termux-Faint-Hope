@@ -223,11 +223,11 @@ PathCheck()
   EXEC_PATH=$(readlink -f ./"$program_name")
   PROJ_NAME=$(basename "$(dirname "$EXEC_PATH")")
   if [[ $EXEC_PATH = $SPCK_PATH ]]; then
-    if [ ! -e ~/CPP/Cpp_Log/"$PROJ_NAME" ]; then mkdir -p ~/CPP/Cpp_Log/"$PROJ_NAME"; fi
-    mv -f ./"$program" ~/CPP/Cpp_Log/"$PROJ_NAME"
-    chmod +x ~/CPP/Cpp_Log/"$PROJ_NAME"/"$program"
+    if [ ! -e ~/CPP/"$PROJ_NAME" ]; then mkdir -p ~/CPP/"$PROJ_NAME"; fi
+    mv -f ./"$program" ~/CPP/"$PROJ_NAME"
+    chmod +x ~/CPP/"$PROJ_NAME"/"$program"
     echo -e ""$BGREEN"Running program from SPCK..."$NONE""
-    ~/CPP/Cpp_Log/"$PROJ_NAME"/"$program"
+    ~/CPP/"$PROJ_NAME"/"$program"
   else 
     echo -e ""$BGREEN"Running program..."$NONE""
     ./"$program"
