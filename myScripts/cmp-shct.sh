@@ -27,7 +27,6 @@ compile_mode="single_file"
 compiler=gcc
 action="Compile"
 run="false"
-debug="false"
 
 NONE='\033[00m'
 BGREEN='\033[01;32m'
@@ -73,16 +72,8 @@ main()
 
 Compile()
 {
-  if [ "$debug" = "true" ]; then
-    compiler=gcc
-    FileCheck
-    echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN} with GCC debug flag...${NONE}"
-    time $compiler "$program_name" -g -o "$program"
-    PathCheck
-  else
-    echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
-    time $compiler "$program_name" -o "$program" 
-  fi
+  echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
+  time $compiler "$program_name" -o "$program"
 }
 
 Preprocessor()
@@ -154,9 +145,6 @@ ArgCheck()
         -c )
           compiler=clang
           ;;
-        -dbg )
-          debug="true"
-          ;;
         -p )
           action="Preprocessor"
           ;;
@@ -222,28 +210,18 @@ FileCheck()
 
 PathCheck()
 {
-  directory_path=~/C++/*
-  file_name=$program
-  file_count=$(find $directory_path -name $file_name | wc -l)
-  if [[ $file_count -gt 0 ]]; then
-    currDir=$(basename $(pwd))
-    mv -f "$program" ~/CPP/"$currDir"
-    chmod +x ~/CPP/"$currDir"/"$program"
-    if [ "$debug" = "true" ]; then
-      echo -e ""$BGREEN"Starting program in debug mode from internal storage..."$NONE""
-      gdb ~/CPP/"$currDir"/"$program"
-    else
-      echo -e ""$BGREEN"Starting program from internal storage..."$NONE""
-      ~/CPP/"$currDir"/"$program" 
-    fi
-  else
-    if [ "$debug" = "true" ]; then
-      echo -e ""$BGREEN"Starting program in debug mode..."$NONE""
-      gdb "$program"
-    else
-      echo -e ""$BGREEN"Starting program..."$NONE""
-      ./"$program"
-    fi
+  SPCK_PATH=/storage/emulated/0/Android/data/io.spck/files/*
+  EXEC_PATH=$(readlink -f ./"$program_name")
+  PROJ_NAME=$(basename "$(dirname "$EXEC_PATH")")
+  if [[ $EXEC_PATH = $SPCK_PATH ]]; then
+    if [ ! -e ~/CPP/"$PROJ_NAME" ]; then mkdir -p ~/CPP/"$PROJ_NAME"; fi
+    mv -f ./"$program" ~/CPP/"$PROJ_NAME"
+    chmod +x ~/CPP/"$PROJ_NAME"/"$program"
+    echo -e ""$BGREEN"Running program from SPCK..."$NONE""
+    ~/CPP/"$PROJ_NAME"/"$program"
+  else 
+    echo -e ""$BGREEN"Running program..."$NONE""
+    ./"$program"
   fi
 }
 
@@ -266,5 +244,5 @@ Help()
   echo
   echo "No arguments will compile and run single .c or .cpp program in current directory"
 }
-  
+
 main "$@";
