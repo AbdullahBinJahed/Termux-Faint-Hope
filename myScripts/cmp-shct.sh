@@ -27,6 +27,7 @@ compile_mode="single_file"
 compiler=gcc
 action="Compile"
 run="false"
+debug=false
 
 NONE='\033[00m'
 BGREEN='\033[01;32m'
@@ -72,8 +73,13 @@ main()
 
 Compile()
 {
-  echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
-  time $compiler "$program_name" -o "$program"
+  if [ $debug = true ]
+    echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN} with debug flag...${NONE}"
+    time $compiler "$program_name" -o "$program" -g
+  else
+    echo -e "${GREEN}Compiling ${BOLD}$program_name${GREEN}...${NONE}"
+    time $compiler "$program_name" -o "$program"
+  fi
 }
 
 Preprocessor()
@@ -144,6 +150,9 @@ ArgCheck()
           ;;
         -c )
           compiler=clang
+          ;;
+        -db )
+          debug=true
           ;;
         -p )
           action="Preprocessor"
@@ -236,6 +245,7 @@ Help()
   printf "  -bin                    creates the binary instructions and saves them in a file\n"
   printf "  -c                      use the Clang Compiler\n"
   printf "  -cmp                    runs the Compiler to create assembly code *.s\n"
+  printf "  -db                     compiles with the debug flag\n"
   printf "  --help                  prints this message\n"
   printf '%-4s%-22s%s\n%-26s%s\n' "  -l" "" "links the object file with linker and saves what" "" "arguments were passed to linker into a *.txt file"
   printf "  -p                      only Preprocess programs and saves them in *.i file\n"
