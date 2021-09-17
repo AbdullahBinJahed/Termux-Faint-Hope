@@ -19,7 +19,7 @@ echo -e "Do you want to download additional packages? [y/n] \c"
 read consent
 if [ $consent = "y" ] || [ $consent = "Y" ];then
   echo -e "${BGREEN}Installing additional packages...${NONE}"
-  pkg install coreutils binutils file imagemagick ncurses neovim proot termux-api termux-elf-cleaner termux-exec termux-services termux-tools -y
+  pkg install coreutils binutils cronie file imagemagick ncurses neovim proot termux-api termux-elf-cleaner termux-exec termux-services termux-tools -y
 fi
 consent=""
 
