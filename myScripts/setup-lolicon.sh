@@ -77,6 +77,7 @@ if [ $consent = "y" ] || [ $consent = "Y" ];then
     pkg install freetype sdl sdl2 sdl2-image sdl2-mixer sdl2-ttf xorgproto -y
     pip3 install cython
     wget https://www.pygame.org/ftp/pygame-1.9.6.tar.gz
+    tar -xvf pygame-1.9.6.tar.gz
     cd pygame-1.9.6
     python3 setup.py -config -auto -sdl2
     python3 setup.py install cython
