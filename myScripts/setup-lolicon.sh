@@ -74,7 +74,7 @@ if [ $consent = "y" ] || [ $consent = "Y" ];then
   if [ $consent = "y" ] || [ $consent = "Y" ];then
     echo -e "${BGREEN}Installing pygame packages...${NONE}"
     pkg install build-essential -y
-    pkg install freetype sdl sdl2 sdl2-image sdl2-mixer sdl2-ttf xorgproto -y
+    pkg install freetype sdl sdl2 sdl2-image sdl2-mixer sdl2-ttf xorgproto libopenmpt -y
     pip3 install cython
     wget https://www.pygame.org/ftp/pygame-1.9.6.tar.gz
     tar -xvf pygame-1.9.6.tar.gz
