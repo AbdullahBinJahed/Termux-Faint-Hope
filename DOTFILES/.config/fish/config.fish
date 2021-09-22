@@ -14,15 +14,15 @@ set -gx VIRTUAL_ENV_DISABLE_PROMPT 1
 alias c='bash /data/data/com.termux/files/home/.lolicon/cmp-shct.sh'
 alias ghp='bash /data/data/com.termux/files/home/.lolicon/scripts/ghpush.sh'
 alias 1='bash /data/data/com.termux/files/home/.lolicon/welcome.sh'
-alias sg='source /data/data/com.termux/files/home/.lolicon/scripts/spck-get.sh'
 alias ccp='source /data/data/com.termux/files/home/.lolicon/scripts/create-cpp-project.sh'
 alias rf='bash /data/data/com.termux/files/home/.lolicon/scripts/remove-folder.sh'
 alias xx='chmod +x *.sh'
 alias vs='vncserver -localhost && export DISPLAY=":1"'
 alias vk='vncserver -kill :1'
-alias 0='clear'
-alias 99='exit'
-alias v='vim'
+alias p=python
+alias 0=clear
+alias 99=exit
+alias v=vim
 alias la='ls -a'
 alias nano='nano -m'
 alias mv='mv -i'
