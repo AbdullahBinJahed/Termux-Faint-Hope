@@ -8,7 +8,7 @@ else
   git add .
   echo -e "commit message: \c"
   read commit_message
-  git commit -m "day "$datenum""
+  git commit -m "$commit_message"
   git push -u origin main
 fi
 
