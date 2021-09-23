@@ -1,17 +1,5 @@
 #bin/bash
 
-CPP_PATH=/data/data/com.termux/files/home/C++*
-if [[ $(pwd) = $CPP_PATH ]]; then
-  CPP_GIT
-else
-  echo "Last commit: $(git log --format=%B -n 1 $(git log -1 --pretty=format:"%h"))"
-  git add .
-  echo -e "commit message: \c"
-  read commit_message
-  git commit -m "$commit_message"
-  git push -u origin main
-fi
-
 CPP_GIT()
 {
   cd /data/data/com.termux/files/home/C++/
@@ -34,4 +22,16 @@ CPP_GIT()
   git push -u origin main
   echo -e "$motd"
 }
+
+CPP_PATH=/data/data/com.termux/files/home/C++*
+if [[ $(pwd) = $CPP_PATH ]]; then
+  CPP_GIT
+else
+  echo "Last commit: $(git log --format=%B -n 1 $(git log -1 --pretty=format:"%h"))"
+  git add .
+  echo -e "commit message: \c"
+  read commit_message
+  git commit -m "$commit_message"
+  git push -u origin main
+fi
 
