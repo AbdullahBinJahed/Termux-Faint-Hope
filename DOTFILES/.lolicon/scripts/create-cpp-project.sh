@@ -10,6 +10,7 @@ if test $argv[1] = "-r"
 else
   if test -e ~/C++/"$argv[1]"
     echo "Project already exists !!!"
+    cd ~/C++/"$argv[1]"/
   else
     mkdir ~/CPP/Cpp_Log/"$argv[1]"
     mkdir ~/C++/"$argv[1]"
