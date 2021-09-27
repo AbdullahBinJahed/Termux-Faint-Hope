@@ -1,14 +1,11 @@
 # Termux scripts
 ## cmp-shct (compiler shortcuts)
-   just copy paste and run the following commands
- - ```wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/setup-cmp-shct.sh```
- - ```chmod +x setup-cmp-shct.sh```
- - ```./setup-cmp-shct.sh```
+   just copy paste and run the following command
+ - ```pkg i curl -y; curl -L https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/setup-cmp-shct.sh | bash```
 
  now run ```c --help``` to know the options
 
 ## Termux setup
- - ```pkg i wget```
- - ```wget https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/setup-lolicon.sh```
- - ```source setup-lolicon.sh```
+   just copy the following command and run it
+ - ```pkg i curl -y; curl -LO https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/setup-lolicon.sh; source setup-lolicon.sh```
 
