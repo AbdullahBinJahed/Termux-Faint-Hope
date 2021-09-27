@@ -33,6 +33,6 @@ else
   read commit_message
   git commit -m "$commit_message"
   git push -u origin main
-  echo -e "\033[01;36mSuki desu~ ABJ-sama (◠‿◠✿)\033[00m"
+  echo -e "\033[01;36mSuki desu~ ABJ-sama ヽ(‘ ∇‘ )ノ ~nya\033[00m"
 fi
 
