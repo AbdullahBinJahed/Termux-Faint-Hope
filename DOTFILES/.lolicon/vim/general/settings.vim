@@ -1,4 +1,4 @@
-"set leader key
+" set leader key
 let g:mapleader = ";"
 
 syntax enable                           " Enables syntax highlighing
@@ -32,8 +32,8 @@ set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
-set formatoptions-=cro                  " Stop newline continution of comments
-set formatoptions-="                    " Stop newline continution of comments
+" set formatoptions-="                  " Stop newline continution of comments
+" set formatoptions-=cro                " Stop newline continution of comments
 "set clipboard=unnamedplus              " Copy paste between vim and everything else
 "set autochdir                          " Your working directory will always be the same as your working directory
 set nojoinspaces                        " Use one space, not two, after punctuation.
@@ -48,14 +48,21 @@ let g:is_posix = 1                      " When the type of shell script is /bin/
 "cmap w!! w !sudo tee %
 
 filetype plugin indent on
+autocmd FileType * set formatoptions-=cro " Stop newline continution of comments
 
 if (has("termguicolors"))
   set termguicolors
 endif
 
-":set cursorline
-":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=blue guibg=darkred guifg=blue
-":hi CursorLine cterm=NONE guibg=#1b253a guifg=NONE
+" :set cursorline
+" :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=blue guibg=darkred guifg=blue
+" :hi CursorLine cterm=NONE guibg=#171321 guifg=NONE
+
+set cursorline
+autocmd VimEnter * highlight CursorLine guibg=#1b253a guifg=NONE
+autocmd InsertEnter * highlight CursorLine guibg=#171321 guifg=NONE
+autocmd InsertLeave * highlight CursorLine guibg=#1b253a guifg=NONE
+" autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=NONE
 
 
 
