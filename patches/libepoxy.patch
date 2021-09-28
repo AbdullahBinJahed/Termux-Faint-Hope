@@ -1,0 +1,13 @@
+diff --git a/src/dispatch_common.c b/src/dispatch_common.c
+index 592df38..2127ad1 100644
+--- a/src/dispatch_common.c
++++ b/src/dispatch_common.c
+@@ -178,7 +178,7 @@
+ #define OPENGL_LIB "/System/Library/Frameworks/OpenGL.framework/Versions/Current/OpenGL"
+ #define GLES1_LIB "libGLESv1_CM.so"
+ #define GLES2_LIB "libGLESv2.so"
+-#elif defined(__ANDROID__)
++#elif false
+ #define GLX_LIB "libGLESv2.so"
+ #define EGL_LIB "libEGL.so"
+ #define GLES1_LIB "libGLESv1_CM.so"
