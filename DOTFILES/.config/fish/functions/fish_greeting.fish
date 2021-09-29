@@ -4,4 +4,6 @@ function fish_greeting
   else
     bash /data/data/com.termux/files/home/.lolicon/welcome.sh
   end
+#  termux-tts-speak Okaiiri naasaaii goshujin-saa maa &
+   play-audio ~/.lolicon/greetings.mp3 &
 end
