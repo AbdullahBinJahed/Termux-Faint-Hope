@@ -12,5 +12,5 @@
  pkg i curl -y; curl -L https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/setup-cmp-shct.sh | bash
  ```
 
- now run ```c --help``` to know the options
+ now run ``` c --help ``` to know the options
 
