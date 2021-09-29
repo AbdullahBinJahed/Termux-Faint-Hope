@@ -1,4 +1,11 @@
 # Termux scripts
+
+## Termux setup
+   just copy the following command and run it
+ ```
+ pkg i curl -y; curl -LO https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/setup-lolicon.sh; source setup-lolicon.sh
+ ```
+
 ## cmp-shct (compiler shortcuts)
    just copy paste and run the following command
  ```
@@ -6,10 +13,4 @@
  ```
 
  now run ```c --help``` to know the options
-
-## Termux setup
-   just copy the following command and run it
- ```
- pkg i curl -y; curl -LO https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/setup-lolicon.sh; source setup-lolicon.sh
- ```
 
