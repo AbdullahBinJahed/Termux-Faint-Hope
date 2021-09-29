@@ -28,8 +28,8 @@ alias nano='nano -m'
 alias mv='mv -i'
 alias rm='rm -i'
 alias ..='cd ..'
-alias ...='../../'
-alias ....='../../../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
 
 export HISTCONTROL=ignoreboth
 
@@ -44,3 +44,4 @@ export HISTCONTROL=ignoreboth
 function adachi --on-event fish_postexec
    echo -e '\e[6 q\c'
 end
+
