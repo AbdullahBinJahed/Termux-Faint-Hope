@@ -1,5 +1,6 @@
 #!bin/bash
 
+cd
 pkg i -y build-essential wget
 pkg i -y '*sdl*' libx11
 pkg i -y unstable-repo
