@@ -14,3 +14,8 @@
 
  now run ``` c --help ``` to know the options
 
+## native compile libgraph (for header file <graphics.h>)
+```
+pkg i curl -y; curl -LO https://raw.githubusercontent.com/AbdullahBinJahed/Termux-Faint-Hope/main/myScripts/build-libgraph.sh; bash build-libgraph.sh
+```
+
