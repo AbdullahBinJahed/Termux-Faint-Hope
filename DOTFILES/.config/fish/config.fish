@@ -31,14 +31,16 @@ alias rm='rm -i'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
+alias `='bash -c "play-audio ~/.lolicon/greetings.mp3 &"'
+alias ww='bash -c "ping -i 0.2 -q -w1 -c1 google.com &>/dev/null && termux-wifi-enable false || termux-wifi-enable true"'
 
-function ww --description 'alias ww=wifi toggle'
-    if ping -q -c 1 -W 0.1 google.com > /dev/null 2>&1
-      termux-wifi-enable false
-    else
-      termux-wifi-enable true
-    end
-end 
+# function ww --description 'alias ww=wifi toggle'
+    # if ping -q -c 1 -W 0.1 google.com > /dev/null 2>&1
+      # termux-wifi-enable false
+    # else
+      # termux-wifi-enable true
+    # end
+# end 
 
 export HISTCONTROL=ignoreboth
 
