@@ -13,5 +13,13 @@ echo
 echo -e ""$GREEN"------------------------------------------------------------------------------------------------------"$NONE""
 echo -e "🌸👯                         👘 "$PURPLE"Terumakkusu, "$CYAN"A "$YELLOW"B "$GREEN"J "$WHITE"- "$WHITE"sama "$RED"e "$YELLOW"yōkoso 👘                             🎎🌸"
 echo -e ""$GREEN"------------------------------------------------------------------------------------------------------"$NONE""
+
+gitlast=$(sed -n '3p' < /data/data/com.termux/files/home/.lolicon/.datelog)
+today=$(date -I)
+
+if [ $today != $gitlast ];then
+  echo -e "\033[01;31m                           There has been no GitHub contribution today !!!\033[00m"
+fi
+
 echo
 tput sgr0
