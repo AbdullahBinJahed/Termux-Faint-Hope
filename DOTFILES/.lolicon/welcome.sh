@@ -9,10 +9,14 @@ CYAN='\033[01;36m'
 WHITE='\033[01;37m'
 BOLD='\033[1m'
 
+if [ "$(stty size)" = "62 70" ] || [ "$(stty size)" = "37 70" ]; then
+  neofetch
+else
 echo
 echo -e ""$GREEN"------------------------------------------------------------------------------------------------------"$NONE""
 echo -e "🌸👯                         👘 "$PURPLE"Terumakkusu, "$CYAN"A "$YELLOW"B "$GREEN"J "$WHITE"- "$WHITE"sama "$RED"e "$YELLOW"yōkoso 👘                             🎎🌸"
 echo -e ""$GREEN"------------------------------------------------------------------------------------------------------"$NONE""
+fi
 
 gitlast=$(sed -n '3p' < /data/data/com.termux/files/home/.lolicon/.datelog)
 today=$(date -I)
