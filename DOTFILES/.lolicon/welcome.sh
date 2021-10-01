@@ -27,3 +27,5 @@ fi
 
 echo
 tput sgr0
+play-audio ~/.lolicon/greetings.mp3 &
+
