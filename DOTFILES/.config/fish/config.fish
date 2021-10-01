@@ -24,12 +24,21 @@ alias 0=clear
 alias 99=exit
 alias v=vim
 alias la='ls -a'
+alias fd=mkdir
 alias nano='nano -m'
 alias mv='mv -i'
 alias rm='rm -i'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
+
+function ww --description 'alias ww=wifi toggle'
+    if ping -q -c 1 -W 0.1 google.com > /dev/null 2>&1
+      termux-wifi-enable false
+    else
+      termux-wifi-enable true
+    end
+end 
 
 export HISTCONTROL=ignoreboth
 
@@ -39,7 +48,6 @@ export HISTCONTROL=ignoreboth
 #echo -e '\e[4 q' # Change to underline
 #echo -e '\e[6 q' # Change to bar
 #echo -ne "\033]12;#00ffff\007\c"
-
 
 function adachi --on-event fish_postexec
    echo -e '\e[6 q\c'
