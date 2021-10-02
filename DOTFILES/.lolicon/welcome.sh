@@ -27,5 +27,5 @@ fi
 
 echo
 tput sgr0
-play-audio ~/.lolicon/greetings.mp3 &
+play-audio ~/.lolicon/okaeri.flac &
 

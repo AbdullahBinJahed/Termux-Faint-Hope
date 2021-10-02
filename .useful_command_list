@@ -1,0 +1,3 @@
+# for audio convert
+ffmpeg -y -i greetings.mp3 -filter:a "volume=2" -strict -2 -acodec flac -ac 2 -aq 50 okaeri.flac
+
