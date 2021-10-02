@@ -1,3 +1,7 @@
 # for audio convert
 ffmpeg -y -i greetings.mp3 -filter:a "volume=2" -strict -2 -acodec flac -ac 2 -aq 50 okaeri.flac
+# for encryption
+openssl enc -aes-256-cbc -a -A -md sha512 -pbkdf2 -iter 250000 -salt -in InputFilePath -out OutputFilePath
+# for decryption
+openssl enc -aes-256-cbc -a -A -d -md sha512 -pbkdf2 -iter 250000 -salt -in InputFilePath -out OutputFilePath
 
