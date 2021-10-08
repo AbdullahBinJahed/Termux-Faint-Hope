@@ -4,4 +4,7 @@ ffmpeg -y -i greetings.mp3 -filter:a "volume=2" -strict -2 -acodec flac -ac 2 -a
 openssl enc -aes-256-cbc -a -A -md sha512 -pbkdf2 -iter 250000 -salt -in InputFilePath -out OutputFilePath
 # for decryption
 openssl enc -aes-256-cbc -a -A -d -md sha512 -pbkdf2 -iter 250000 -salt -in InputFilePath -out OutputFilePath
-
+# search matching string in all files
+grep -r "search" .
+# search and replace matching string in all files
+grep -rl 'search' . | xargs sed -i 's/search/replace/g'
