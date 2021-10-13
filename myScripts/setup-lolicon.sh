@@ -6,7 +6,7 @@ RED='\033[01;31m'
 clear
 echo -e "$BGREEN"Setup started..."$NONE"
 
-pkg update
+yes | pkg update
 yes | pkg upgrade
 
 echo -e "$BGREEN"Installing packages..."$NONE"
