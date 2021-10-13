@@ -118,7 +118,7 @@ cp -rf .lolicon ~/
 echo -e "$BGREEN"Installing vim plugin..."$NONE"
 vim -c'PlugInstall --sync' +qa
 echo "source ~/.lolicon/vim/general/colorscheme.vim" >> ~/.vimrc
-echo -e "$BGREEN"Removed Message of the Day (motd)..."$NONE"
+echo -e "$BGREEN"Removed Message of the Day \(motd\)..."$NONE"
 rm /data/data/com.termux/files/usr/etc/motd
 cd ../../
 echo -e "$BGREEN"Deleting AbdullahBinJahed/Termux-Faint-Hope..."$NONE"
