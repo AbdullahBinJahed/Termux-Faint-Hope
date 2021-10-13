@@ -6,10 +6,8 @@ RED='\033[01;31m'
 clear
 echo -e "$BGREEN"Setup started..."$NONE"
 
-apt update -y --force-yes
-apt upgrade -y --force-yes
-pkg update -y --force-yes
-pkg upgrade -y --force-yes
+pkg update
+yes | pkg upgrade
 
 echo -e "$BGREEN"Installing packages..."$NONE"
 sleep 1
