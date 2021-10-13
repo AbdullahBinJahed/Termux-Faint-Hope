@@ -128,4 +128,4 @@ echo -e "${BGREEN}Changing default shell from bash to fish...${NONE}"
 chsh -s fish
 echo -e "${BGREEN}Setup Completed${NONE}"
 termux-reload-settings
-exit
+rm ./setup-lolicon.sh && exit
