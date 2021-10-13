@@ -16,7 +16,7 @@ pkg i -y wget curl cmatrix vim git gh man neofetch tree fish
 
 echo -e "Do you want to download additional packages? [y/n] \c"
 read consent
-if [ $consent = "y" ] || [ $consent = "Y" ];then
+if [ "$consent" = "y" ] || [ "$consent" = "Y" ];then
   echo -e "$BGREEN"Installing additional packages..."$NONE"
   pkg i -y coreutils binutils cronie file imagemagick ncurses neovim proot tmux termux-api termux-elf-cleaner termux-exec termux-services termux-tools zsh
 fi
@@ -24,7 +24,7 @@ consent=""
 
 echo -e "Do you want to download C/C++ packages? [y/n] \c"
 read consent
-if [ $consent = "y" ] || [ $consent = "Y" ];then
+if [ "$consent" = "y" ] || [ "$consent" = "Y" ];then
   echo -e "$BGREEN"Installing C/C++ packages..."$NONE"
   pkg install cgdb clang cmake gdb lldb make -y
   echo -e "$BGREEN"Downloading setup-cmp-shct"$NONE"
@@ -36,7 +36,7 @@ consent=""
 
 echo -e "Do you want to download Node.js and React packages? [y/n] \c"
 read consent
-if [ $consent = "y" ] || [ $consent = "Y" ];then
+if [ "$consent" = "y" ] || [ "$consent" = "Y" ];then
   echo -e "$BGREEN"Installing Node.js..."$NONE"
   pkg install nodejs yarn -y
   echo -e "$BGREEN"Installing React packages..."$NONE"
@@ -46,7 +46,7 @@ if [ $consent = "y" ] || [ $consent = "Y" ];then
   consent=""
   echo -e "Do you want to create a test React app now? [y/n] \c"
   read consent
-  if [ $consent = "y" ] || [ $consent = "Y" ];then
+  if [ "$consent" = "y" ] || [ "$consent" = "Y" ];then
     echo
     echo
     echo -e "$RED"This may take a long time so please wait until it"'"s finished"$NONE"
@@ -58,7 +58,7 @@ consent=""
 
 echo -e "Do you want to download Python packages? [y/n] \c"
 read consent
-if [ $consent = "y" ] || [ $consent = "Y" ];then
+if [ "$consent" = "y" ] || [ "$consent" = "Y" ];then
   echo -e "$BGREEN"Installing Python packages..."$NONE"
   curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh
   pkg install python numpy scipy vim-python -y
@@ -70,7 +70,7 @@ if [ $consent = "y" ] || [ $consent = "Y" ];then
   consent=""
   echo -e "Do you want to install pygame? [y/n] \c"
   read consent
-  if [ $consent = "y" ] || [ $consent = "Y" ];then
+  if [ "$consent" = "y" ] || [ "$consent" = "Y" ];then
     echo -e "$BGREEN"Installing pygame packages..."$NONE"
     pkg install build-essential x11-repo -y
     pkg install freetype sdl sdl2 sdl2-image sdl2-mixer sdl2-ttf xorgproto libopenmpt libgomp-11 -y
@@ -86,7 +86,7 @@ consent=""
 
 echo -e "Do you want to download Graphical/X11 packages? [y/n] \c"
 read consent
-if [ $consent = "y" ] || [ $consent = "Y" ];then
+if [ "$consent" = "y" ] || [ "$consent" = "Y" ];then
   echo -e "$BGREEN"Installing X11 packages..."$NONE"
   pkg install x11-repo
   pkg install freeglut gl4es glew glu gtk2 gtk3 gtk4 mesa mesa-demos python-tkinter qt-creator sdl2 sdl2-image sdl2-mixer sdl2-net sdl2-ttf tk vim-gtk tigervnc xfce4 -y
