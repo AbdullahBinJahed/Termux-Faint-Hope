@@ -6,6 +6,8 @@ RED='\033[01;31m'
 clear
 echo -e "$BGREEN"Setup started..."$NONE"
 
+termux-setup-storage
+
 yes | pkg update
 yes | pkg upgrade
 
