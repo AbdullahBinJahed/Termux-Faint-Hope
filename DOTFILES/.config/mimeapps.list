@@ -1,0 +1,6 @@
+[Added Associations]
+image/jpeg=gtk3-demo.desktop;
+application/x-sharedlib=gtk3-demo.desktop;
+application/x-executable=fish.desktop;
+application/json=nvim.desktop;userapp-vim-BBHXA1.desktop;
+application/octet-stream=vifm.desktop;
