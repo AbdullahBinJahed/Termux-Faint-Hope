@@ -9,7 +9,8 @@ CYAN='\033[01;36m'
 WHITE='\033[01;37m'
 BOLD='\033[1m'
 
-if [ "$(stty size)" = "62 70" ] || [ "$(stty size)" = "37 70" ]; then
+if [ "$(stty size)" = "62 70" ] || [ "$(stty size)" = "38 71" ]; then
+# if [ $(stty size | awk '{print $1}') > 30 ]; then
   neofetch
   warning="\033[01;31m           There has been no GitHub contribution today !!!\033[00m"
 else

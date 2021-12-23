@@ -224,13 +224,21 @@ PathCheck()
   PROJ_NAME=$(basename "$(dirname "$EXEC_PATH")")
   if [[ $EXEC_PATH = $SPCK_PATH ]]; then
     if [ ! -e ~/CPP/Cpp_Log/"$PROJ_NAME" ]; then mkdir -p ~/CPP/Cpp_Log/"$PROJ_NAME"; fi
-    mv -f ./"$program" ~/CPP/Cpp_Log/"$PROJ_NAME"
-    chmod +x ~/CPP/Cpp_Log/"$PROJ_NAME"/"$program"
-    echo -e ""$BGREEN"Running program from SPCK..."$NONE""
-    ~/CPP/Cpp_Log/"$PROJ_NAME"/"$program"
-  else 
-    echo -e ""$BGREEN"Running program..."$NONE""
-    ./"$program"
+    if [ -e ./"$program" ]; then
+      mv -f ./"$program" ~/CPP/Cpp_Log/"$PROJ_NAME"
+      chmod +x ~/CPP/Cpp_Log/"$PROJ_NAME"/"$program"
+      echo -e ""$BGREEN"Running program from SPCK..."$NONE""
+      ~/CPP/Cpp_Log/"$PROJ_NAME"/"$program"
+    else
+      echo -e "$RED""Compilation failed !!!""$NONE"
+    fi
+  else
+    if [ -e ./"$program" ]; then
+      echo -e ""$BGREEN"Running program..."$NONE""
+      ./"$program"
+    else
+      echo -e "$RED""Compilation failed !!!""$NONE"
+    fi
   fi
 }
 

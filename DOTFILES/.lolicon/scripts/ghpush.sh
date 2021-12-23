@@ -14,6 +14,7 @@ MAIN()
     git push -u origin main
     echo -e "\033[01;36mSuki desu~ ABJ-sama ヽ(‘ ∇‘ )ノ ~nya\033[00m"
   fi
+  sed -i '3s/.*/'"$(date -I)"'/' /data/data/com.termux/files/home/.lolicon/.datelog
 }
 
 CPP_GIT()
@@ -49,7 +50,7 @@ CHECK_NETWORK()
        echo -e "\033[01;32mTrying to connect to wifi...\033[00m"
        termux-wifi-enable true
        sleep 3
-       if ping -q -c 1 -W 3 google.com > /dev/null 2>&1; then
+       if ping -q -c 1 -W 4 google.com > /dev/null 2>&1; then
          echo -e "\033[01;32mThe network is up. Retrying... ヽ(*⌒▽⌒*)ﾉ\033[00m"
          CHECK_NETWORK
        else
@@ -59,3 +60,4 @@ CHECK_NETWORK()
 }
 
 CHECK_NETWORK
+

@@ -1,5 +1,5 @@
 "### Mapping Escape and Insert mode ###
-" nnoremap <Space> i<Right>
+nnoremap <Space> i<Right>
 nnoremap <CR> i
 noremap jk <ESC>
 noremap! jk <ESC>
@@ -21,13 +21,19 @@ endfunction
 noremap <expr> p Paste('p')
 noremap <expr> P Paste('P')
 
-"### Saving and Exiting files ###
+"### Saving, Deleting and Exiting files ###
 inoremap 99 <ESC>:wq<CR>
 noremap 99 <ESC>:wq<CR>
 noremap <C-s> <ESC>:w<CR>
 noremap! <C-s> <ESC>:w<CR>
 noremap <C-q> <ESC>:q!<CR>
 noremap! <C-q> <ESC>:q!<CR>
+
+noremap [3;5~ <C-o>:call DeleteFileAndCloseBuffer()<CR>
+fun! DeleteFileAndCloseBuffer()
+  let choice = confirm("Delete file and close buffer?", "&yes!\n&no", 1)
+  if choice == 1 | call delete(expand('%:p')) | q! | endif
+endfun
 
 "### Copy, Paste and Cut ###
 vnoremap <C-c> y$
